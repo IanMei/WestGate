@@ -76,8 +76,6 @@ CREATE TABLE User (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255) UNIQUE,
     password_hash VARCHAR(255),
-    role ENUM('admin', 'management', 'viewer'),
-    institution VARCHAR(255), -- Only meaningful for 'management'
     full_name VARCHAR(100),
     avatar_url VARCHAR(255),
     bio TEXT,
@@ -85,13 +83,28 @@ CREATE TABLE User (
     created_at DATETIME
 );
 
+-- Subclasses
+CREATE TABLE AdminUser (
+    user_id INT PRIMARY KEY,
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+
+CREATE TABLE ManagementUser (
+    user_id INT PRIMARY KEY,
+    institution VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+
+CREATE TABLE ViewerUser (
+    user_id INT PRIMARY KEY,
+    FOREIGN KEY (user_id) REFERENCES User(user_id)
+);
+
 CREATE TABLE NewsPost (
     post_id INT AUTO_INCREMENT PRIMARY KEY,
     school_id INT,
-    author_id INT,
     published_at DATETIME,
-    FOREIGN KEY (school_id) REFERENCES School(school_id),
-    FOREIGN KEY (author_id) REFERENCES User(user_id)
+    FOREIGN KEY (school_id) REFERENCES School(school_id)
 );
 
 CREATE TABLE NewsPostTranslation (
@@ -104,25 +117,25 @@ CREATE TABLE NewsPostTranslation (
     FOREIGN KEY (post_id) REFERENCES NewsPost(post_id)
 );
 
--- Editor/Admin content log
-CREATE TABLE PostEditLog (
+-- Logs for content editing (post)
+CREATE TABLE ContentEditLog (
     log_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
     post_id INT,
     action TEXT,
     log_time DATETIME,
-    FOREIGN KEY (user_id) REFERENCES User(user_id),
+    FOREIGN KEY (user_id) REFERENCES ManagementUser(user_id),
     FOREIGN KEY (post_id) REFERENCES NewsPost(post_id)
 );
 
--- Editor/Admin school log
+-- Logs for school editing
 CREATE TABLE SchoolEditLog (
     log_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
     school_id INT,
     action TEXT,
     log_time DATETIME,
-    FOREIGN KEY (user_id) REFERENCES User(user_id),
+    FOREIGN KEY (user_id) REFERENCES ManagementUser(user_id),
     FOREIGN KEY (school_id) REFERENCES School(school_id)
 );
 
@@ -132,6 +145,55 @@ CREATE TABLE VisitLog (
     school_id INT,
     visit_time DATETIME,
     action_type ENUM('view', 'edit', 'comment'),
-    FOREIGN KEY (user_id) REFERENCES User(user_id),
+    FOREIGN KEY (user_id) REFERENCES ViewerUser(user_id),
+    FOREIGN KEY (school_id) REFERENCES School(school_id)
+);
+
+CREATE TABLE Kindergarten (
+    sub_id INT,
+    school_id INT,
+    name VARCHAR(255),
+    student_count INT,
+    PRIMARY KEY (school_id, sub_id),
+    FOREIGN KEY (school_id) REFERENCES School(school_id)
+);
+
+CREATE TABLE PrimarySchool (
+    sub_id INT,
+    school_id INT,
+    name VARCHAR(255),
+    student_count INT,
+    PRIMARY KEY (school_id, sub_id),
+    FOREIGN KEY (school_id) REFERENCES School(school_id)
+);
+
+CREATE TABLE JuniorHighSchool (
+    sub_id INT,
+    school_id INT,
+    name VARCHAR(255),
+    student_count INT,
+    PRIMARY KEY (school_id, sub_id),
+    FOREIGN KEY (school_id) REFERENCES School(school_id)
+);
+
+CREATE TABLE HighSchool (
+    sub_id INT,
+    school_id INT,
+    name VARCHAR(255),
+    student_count INT,
+    PRIMARY KEY (school_id, sub_id),
+    FOREIGN KEY (school_id) REFERENCES School(school_id)
+);
+
+CREATE TABLE AnonymousVisitLog (
+    id SERIAL PRIMARY KEY,
+    session_id VARCHAR(255) NOT NULL,
+    ip_address VARCHAR(45),
+    user_agent TEXT,
+    referrer TEXT,
+    page_url TEXT,
+    school_id INT,
+    action_type ENUM('view', 'comment', 'search'),
+    visit_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (school_id) REFERENCES School(school_id)
 );
