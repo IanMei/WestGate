@@ -43,8 +43,9 @@ CREATE TABLE Region (
 
 CREATE TABLE School (
     school_id INT AUTO_INCREMENT PRIMARY KEY,
+    school_name varchar(100),
     region_id INT,
-    established_year INT,
+    established_year SMALLINT(4),
     school_type VARCHAR(100),
     status VARCHAR(50),
     address VARCHAR(255),
@@ -65,23 +66,12 @@ CREATE TABLE SchoolTranslation (
     FOREIGN KEY (school_id) REFERENCES School(school_id)
 );
 
-CREATE TABLE SchoolLevel (
-    level_id INT AUTO_INCREMENT PRIMARY KEY,
-    school_id INT,
-    level_name ENUM('Kindergarten', 'Primary', 'Junior', 'Senior'),
-    start_grade INT,
-    end_grade INT,
-    num_classes INT,
-    num_students INT,
-    FOREIGN KEY (school_id) REFERENCES School(school_id)
-);
-
 CREATE TABLE GraduateDestination (
     destination_id INT AUTO_INCREMENT PRIMARY KEY,
     school_id INT,
     country VARCHAR(100),
     num_students INT,
-    year INT,
+    year SMALLINT(4),
     FOREIGN KEY (school_id) REFERENCES School(school_id)
 );
 
