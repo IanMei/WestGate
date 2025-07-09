@@ -1,0 +1,56 @@
+﻿@model CMS.IService.FrontEnd.Common.Dto.GoodLessonDto
+<div class="index_class">
+    <div class="index_live_tit2">
+        <span>精选好课</span>
+        <ul class="scroll">
+            @foreach (var item in Model.itemizes)
+            {
+                <li><a href="@Html.Encode(item.url)">@Html.Encode(item.name)</a></li>
+                if (Model.itemizes.IndexOf(item) < Model.itemizes.Count - 1)
+                {
+                    <li><a href="javascript:void(0);">丨</a></li>
+                }
+            }
+        </ul>
+        <a href="/Course/Index" class="more">更多</a>
+    </div>
+    <div class="index_class_main">
+        <ul>
+            @foreach (var item in Model.lessons)
+            {
+                <li>
+                    <a href="@Html.Encode("/Course/Details/" + item.courseId)">
+                        <img src="@Html.Encode(item.courseLogo)" />
+                        <div class="mine_class_words">
+                            <span>@Html.Encode(item.courseName)</span>
+                            @foreach (var tag in item.courseTags)
+                            {
+                                <p>@Html.Encode(tag)</p>
+                            }
+                            <div class="mine_class_bot">
+                                <dd>@Html.Encode(item.readTimes)人学过</dd>
+                                @if (item.isFree)
+                                {
+                                    <dt>免费</dt>
+                                }
+                                else
+                                {
+                                    if (item.ispay)
+                                    {
+                                        <dt>VIP</dt>
+                                    }
+                                    else
+                                    {
+                                        <dt>
+                                            @Html.Encode("￥" + item.coursePrice)
+                                        </dt>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

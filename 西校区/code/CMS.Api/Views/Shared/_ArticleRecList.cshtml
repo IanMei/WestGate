@@ -1,0 +1,18 @@
+﻿@model IList<CMS.IService.FrontEnd.Article.Dto.FrontArticleItem>
+<div class="recommend">
+    <span>文章推荐</span>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="/Article/Content/@Html.Encode(item.id)">
+                    <img src="@Html.Encode(item.image)" />
+                    <dl>
+                        <dd>@Html.Encode(item.title)</dd>
+                        <dt>@Html.Encode(item.datepublish)</dt>
+                    </dl>
+                </a>
+            </li>
+        }
+    </ul>
+</div>

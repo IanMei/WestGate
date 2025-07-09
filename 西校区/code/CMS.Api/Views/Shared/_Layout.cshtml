@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    @if (IsSectionDefined("metaInfo"))
+    {
+        @RenderSection("metaInfo");
+    }
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/vue")
+    @Styles.Render("~/Content/elementcss")
+    @Scripts.Render("~/bundles/element")
+    <link type="text/css" rel="stylesheet" href="~/Content/css/style.css">
+    <link type="text/css" rel="stylesheet" href="~/Content/css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/lanrenzhijia.css">
+    @Scripts.Render("~/bundles/jquery")
+    <script type="text/javascript" src="~/Content/js/MSClass.js"></script>
+    <script type="text/javascript" src="~/Content/js/lanrenzhijia.js"></script>
+    <script type="text/javascript" src="~/Content/js/menu.js"></script>
+    <script type="text/javascript">
+        //读Cookie
+        function getCookie(objName) {//获取指定名称的cookie的值
+            var arrStr = document.cookie.split("; ");
+            for (var i = 0; i < arrStr.length; i++) {
+                var temp = arrStr[i].split("=");
+                if (temp[0] == objName) return unescape(temp[1]);  //解码
+            }
+            return "";
+        }
+    </script>
+    @if (IsSectionDefined("swipe"))
+    {
+        @RenderSection("swipe");
+    }
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

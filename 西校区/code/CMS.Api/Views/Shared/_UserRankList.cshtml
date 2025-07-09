@@ -1,0 +1,73 @@
+﻿@model IList<CMS.IService.FrontEnd.Common.Dto.UserRankDto>
+<div class="vip">
+    <div class="vip_main">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <a href="/Business/Membership?grade=@Html.Encode(item.no)">
+                        <img src="@Html.Encode(item.logo)" />
+                        <div class="vip_right">
+                            <span>@Html.Encode(item.name)</span>
+                            <dd>@Html.Encode(item.description)</dd>
+                        </div>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+<div class="vip2">
+    <div class="vip2_main">
+        <ul>
+            <li>
+                <a href="/Course/Index">
+                    <img src="@Url.Content("/Content/images/class.png")" />
+                    <div class="vip_right2">
+                        <span>课程中心</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/Train/Index">
+                    <img src="@Url.Content("/Content/images/peixun.png")" />
+                    <div class="vip_right2">
+                        <span>现场培训</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/Live/Index">
+                    <img src="@Url.Content("/Content/images/live.png")" />
+                    <div class="vip_right2">
+                        <span>直播课堂</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/Download/Index">
+                    <img src="@Url.Content("/Content/images/dw.png")" />
+                    <div class="vip_right2">
+                        <span>下载中心</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/Article/Index">
+                    <img src="@Url.Content("/Content/images/wz.png")" />
+                    <div class="vip_right2">
+                        <span>文章</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/Business/Membership">
+                    <img src="@Url.Content("/Content/images/huiyuan.png")" />
+                    <div class="vip_right2">
+                        <span>会员</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

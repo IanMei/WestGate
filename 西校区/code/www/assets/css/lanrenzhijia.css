@@ -1,0 +1,73 @@
+/*reset*/
+iframe{display:block}
+fieldset{border:1px solid #c0c0c0;margin:0 2px 18px;padding:0.35em 0.625em 0.75em}
+legend{border:0;padding:0;white-space:normal;*margin-left:-7px}
+s{text-decoration:none;}
+/*public*/
+.cf:after {content: "";clear: both;display: block;height: 0;overflow: hidden}
+.cf {zoom: 1}
+.fl{display:inline;float:left}.fr{display:inline;float:right}
+.lh36 {line-height: 40px;font-size: 14px;color: #000 ;font-weight: normal}
+.lh30 {line-height: 30px}
+.pl20 {padding-left: 20px}
+
+h2{font-family: "微软雅黑"; font-size: 14px;}
+.wd240{ width: 240px;}
+.wd252{width: 232px;}
+.ht399{height: 399px;}
+.ht14{ height: 14px;}
+.lh33{ line-height: 33px;}
+.lh23{ line-height: 23px;}
+.lh12{ line-height: 12px;}
+.pb10{ padding-bottom: 10px;}
+.pb20{ padding-bottom: 20px;}
+.pr20{ padding-right:20px;}
+.wd204{ width: 204px;}
+.wd443{ width: 443px;}
+.wd185{ width: 185px;}
+.ml19{ margin-left: 19px;}
+.pt30{ padding-top: 30px;} 
+.pb12{ padding-bottom: 12px;}
+.bt{border-top: 1px solid #eae7e7;}
+.gray{color: #999;}
+.blee{ border-left: 1px solid #eeeeee;}
+.fwblod{ font-weight:bold;}
+.nav-wrap{ position:relative;*z-index:2;width: 100%; background: #fff;}
+.nav{ position: relative; width: 1010px;  margin: 0 auto; padding-left: 190px;}
+.goods{ position: absolute; top: 0;left: 0;width: 190px;}
+.goods h2 a {display: block;text-align: center;line-height: 40px;color: #fff;background: #00b1fb;font-size: 14px}
+.goods h2 a:hover{ text-decoration:none;}
+
+.nav-list li{ float: left; }
+.nav-list a{ display: block; height: 40px; float: left; padding: 0 20px; text-align: center;color: #000;font: 14px/40px "微软雅黑";text-decoration: none;}
+.nav-list a:hover{ text-decoration: none;color: #00b1fb; height: 40px;}
+.nav-list a.on{color: #00b1fb;}
+.all-goods{z-index: 998; position: absolute;top: 0px;left: 0;width:  190px;background: #fff;/*border: solid #00b1fb;*/border-width: 0 2px 2px;overflow: visible;height: 400px}
+.all-goods .item{width: 190px;height: 39.8px;background: #fff;}
+.all-goods .btnone{ border-top:none;}
+.all-goods .item .product{ position: absolute;z-index: 999; width:  190px;}
+.all-goods .item .product h3{width: 157px;height: 40px;padding-left: 28px;border-width: 1px 0;font-weight: normal;line-height: 40px;/* background: url(http://gtcdn1.gaitu.com/images/www/indexSprite.png) no-repeat -12px 12px;*/}
+.all-goods .item .product h3 a{ color: #666666; font-size:14px; font-family:"微软雅黑";display: block}
+.all-goods .item .product h3 a:hover{ text-decoration:none;}
+.all-goods .item .product s{display: block;position: absolute;top: 13px;left: 167px;width: 6px;height: 9px; background: url(http://gtcdn1.gaitu.com/images/www/indexSprite.png) no-repeat 0px 0px;}
+.all-goods .active .product h3{line-height:40px;background-position:-12px -185px;background: rgba(255,255,255,.95);/*border:1px solid #00b1fb;*/ border-width:2px 0;width: 160px;}
+.all-goods .active .product h3 a{ color: #00b1fb;}
+.all-goods .product-wrap{ position: absolute; width: 478px; z-index: 99;/* border:2px solid #00b1fb;*/ background: rgba(255,255,255,.95);padding: 20px; display: none;}
+.all-goods .product-wrap p{ color:#999999;}
+.all-goods .posone{left:  190px; top: 0px;}
+.all-goods .postwo{left:  190px; top: 37px;}
+.all-goods .posthree{left:  190px; top: 74px;}
+.all-goods .posfour{left:  190px; top: 111px;}
+.all-goods .posfive{left:  190px; top: 148px;}
+.all-goods .possix{left:  190px; top: 185px;}
+.all-goods .posseven{left:  190px; bottom: -2px;}
+.all-goods .poseight{left:  190px; bottom: -2px;}
+.all-goods .posnine{left:  190px; bottom: -2px;}
+.all-goods .posten{left:  190px; bottom: -2px;}
+.all-goods .poseleven{left:  190px; bottom: -2px;}
+.all-goods .product-wrap h2{ font-size: 16px;color: #333;font-weight: bold;}
+.all-goods .product-wrap h2 a{height: auto;line-height: 16px;color: #333;padding-left: 0;background: none}
+.all-goods .product-wrap ul li{ float: left; display: inline; margin-right: 14px; margin-top: 14px; white-space:nowrap;width: 90px}
+.all-goods .product-wrap ul li a{ padding-left: 30px;/* background: url(http://gtcdn1.gaitu.com/images/www/indexSprite.png) no-repeat -8px -249px;*/color: #666666;display: inline-block;line-height: 18px; text-decoration: none; font-weight:bold;}
+.all-goods .product-wrap ul li a:hover{ text-decoration: none; /*background-position: -8px -219px; */color: #00b1fb;}
+.all-goods .product-wrap div dd,.all-goods .product-wrap div dl a{ display:block; width:185px; height:120px; overflow:hidden;}

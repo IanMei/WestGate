@@ -1,0 +1,56 @@
+﻿.swipe {
+    width: 94%;
+    margin: 0 auto;
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+    border-radius: 5px;
+}
+
+.swipe-wrap {
+    overflow: hidden;
+    position: relative;
+}
+
+    .swipe-wrap > div {
+        float: left;
+        width: 100%;
+        position: relative;
+    }
+
+.swipe > ol {
+    height: 20px;
+    position: relative;
+    z-index: 10;
+    width: 20%;
+    left: 40%;
+    bottom: 0px;
+    margin-top: -19px;
+    text-align: center;
+}
+
+    .swipe > ol > li {
+        display: inline-block;
+        margin: 5%;
+        width: 10px;
+        height: 3px;
+        background-color: #fff;
+        opacity: 0.9;
+        border-radius: 5px;
+    }
+
+        .swipe > ol > li.on {
+            background-color: #2162ae;
+        }
+
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfloat {
+    zoom: 1;
+}

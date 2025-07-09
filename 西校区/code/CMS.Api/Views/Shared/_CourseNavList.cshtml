@@ -1,0 +1,36 @@
+﻿@model IList<CMS.IService.FrontEnd.Common.Dto.CourseNavDto>
+<div class="nav-wrap">
+    <div class="nav">
+        <div class="goods">
+            <div class="all-goods">
+                @foreach (var item in Model)
+                {
+                    <div class="item btnone">
+                        <div class="product">
+                            <h3>
+                                <a href="javascript:void(0);">@Html.Encode(item.categoryName)</a>
+                            </h3>
+                        </div>
+                        @if (item.typeList.Count > 0)
+                        {
+                            <div class="product-wrap posone">
+                                <div class="cf">
+                                    <div class="fl wd443 pr20">
+                                        <ul class="cf">
+                                            @foreach (var row in item.typeList)
+                                            {
+                                                <li>
+                                                    <a href="@Html.Encode(row.url)" target="_self">@Html.Encode(row.typeName)</a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

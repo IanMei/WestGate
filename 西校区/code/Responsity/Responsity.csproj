@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{41F6C9EB-6232-493E-BDD7-188496601B57}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS.Core.Responsity</RootNamespace>
+    <AssemblyName>CMS.Core.Responsity</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbConfig\DataBasecfg.cs" />
+    <Compile Include="Interface\IDynamicRepository.cs" />
+    <Compile Include="Interface\IExtendRepository.cs" />
+    <Compile Include="Service\DynamicRepository.cs" />
+    <Compile Include="Service\ExtendRepository.cs" />
+    <Compile Include="DbConfig\SqlServercfg.cs" />
+    <Compile Include="Interface\IBaseRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\BaseRepository.cs" />
+    <Compile Include="Tabls\About\APP_ABOUT.cs" />
+    <Compile Include="Tabls\Activity\APP_ACTIVITY.cs" />
+    <Compile Include="Tabls\Activity\APP_ACTIVITY_ENROLL.cs" />
+    <Compile Include="Tabls\App\APP_BANNER.cs" />
+    <Compile Include="Tabls\App\APP_FILE.cs" />
+    <Compile Include="Tabls\App\APP_LINK.cs" />
+    <Compile Include="Tabls\App\APP_MSG.cs" />
+    <Compile Include="Tabls\App\APP_SETUP.cs" />
+    <Compile Include="Tabls\App\APP_SMS.cs" />
+    <Compile Include="Tabls\App\APP_TEMP.cs" />
+    <Compile Include="Tabls\Base\APP_CITY.cs" />
+    <Compile Include="Tabls\Base\BASE_CITY.cs" />
+    <Compile Include="Tabls\Base\BASE_CLASS.cs" />
+    <Compile Include="Tabls\Base\BASE_DISYRICT.cs" />
+    <Compile Include="Tabls\Base\BASE_PROVINCE.cs" />
+    <Compile Include="Tabls\Base\BASE_TYPE.cs" />
+    <Compile Include="Tabls\Help\APP_HELP.cs" />
+    <Compile Include="Tabls\Juges\APP_JUDGES.cs" />
+    <Compile Include="Tabls\Juges\APP_JUDGES_HONOR.cs" />
+    <Compile Include="Tabls\Juges\APP_QUESTIONNAIRE.cs" />
+    <Compile Include="Tabls\Juges\APP_QUESTIONNAIRE_ITEM.cs" />
+    <Compile Include="Tabls\Juges\APP_QUESTIONNAIRE_JUDGES.cs" />
+    <Compile Include="Tabls\School\APP_FACILITIES.cs" />
+    <Compile Include="Tabls\School\APP_HONOR.cs" />
+    <Compile Include="Tabls\School\APP_INTERVIEW.cs" />
+    <Compile Include="Tabls\School\APP_SCHOOL.cs" />
+    <Compile Include="Tabls\School\APP_SCHOOL_FILE.cs" />
+    <Compile Include="Tabls\System\SYS_FUNCTION.cs" />
+    <Compile Include="Tabls\System\SYS_MODULE.cs" />
+    <Compile Include="Tabls\System\SYS_ORGAN.cs" />
+    <Compile Include="Tabls\System\SYS_PERM.cs" />
+    <Compile Include="Tabls\System\SYS_ROLE.cs" />
+    <Compile Include="Tabls\System\SYS_USER.cs" />
+    <Compile Include="Tabls\System\SYS_USER_ROLE.cs" />
+    <Compile Include="Tabls\System\USER_DEVICE.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CMS.Common\Common.csproj">
+      <Project>{1248e800-05ee-462e-bd39-dbc0820e57a4}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{79FFB25F-F146-40FB-A67C-D9E0A01E7B40}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

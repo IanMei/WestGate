@@ -1,0 +1,32 @@
+﻿@model IList<CMS.IService.FrontEnd.Common.Dto.TeacherItem>
+<div class="index-mingshi">
+    <div class="index_live_tit">
+        <span>行业名师</span>
+    </div>
+    <div class="mingshi_main">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <img src="@Html.Encode(item.teacherLogo)" />
+                    <span>@Html.Encode(item.teacherName)</span>
+                    <dd>@Html.Encode(item.description)</dd>
+                    <dt><strong>@Html.Encode(item.likedTimes)人</strong>跟他学</dt>
+                </li>
+            }
+        </ul>
+    </div>
+    <ul class="scroll3">
+        @foreach (var item in Model)
+        {
+            <li>
+                <img src="@Html.Encode(item.teacherLogo)">
+                <div class="cena">
+                    <span>@Html.Encode(item.teacherName)</span>
+                    <dd>@Html.Encode(item.description)</dd>
+                    <dt><p>@Html.Encode(item.likedTimes)人</p>跟他学</dt>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

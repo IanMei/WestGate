@@ -1,0 +1,464 @@
+﻿PRINT 'CREATE TABLE SYS_USER'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[SYS_USER]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[SYS_USER]
+GO
+
+CREATE TABLE SYS_USER
+(
+	USER_ID			DECIMAL(9)	IDENTITY (1,1)	NOT NULL,
+	USER_CODE		Nvarchar(20)	NOT NULL,
+	USER_PWD		Nvarchar(120)	NOT NULL,
+	USER_NAME		Nvarchar(20)	NOT NULL,
+	ORGAN_CODE		Nvarchar(20)	NULL,
+	ROLE_TYPE		Nvarchar(20)	Default('02')	NOT NULL,
+	EMAIL			Nvarchar(100)	NULL,
+	MOBILE			Nvarchar(20)	NULL,
+	IS_AVAILABLE	Int	Default(1)	NOT NULL,
+	IS_ADMIN	Int	Default(0)	NOT NULL,
+	REMARK			Nvarchar(200)	NULL,
+	CREATE_BY		Decimal(9)	NOT NULL,
+	CREATE_TIME		DateTime	NOT NULL,
+	UPDATE_BY		Decimal(9)	NOT NULL,
+	UPDATE_TIME		DateTime	NOT NULL,
+	constraint SYS_USER_PK PRIMARY KEY CLUSTERED (USER_ID)
+)
+GO
+CREATE UNIQUE INDEX SYS_USER_IDX01 ON SYS_USER (USER_CODE)
+GO
+
+PRINT 'CREATE TABLE SYS_ROLE'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[SYS_ROLE]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[SYS_ROLE]
+GO
+
+CREATE TABLE SYS_ROLE
+(
+	ROLE_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	ROLE_NO	Nvarchar(20)		NOT NULL,
+	ROLE_NAME	Nvarchar(20)		NOT NULL,
+	ROLE_TYPE	Nvarchar(10)	Default('02')	NOT NULL,
+	IS_ENABLED	Int	Default(1)	NOT NULL,
+	IS_ADMIN	Int	Default(0)	NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_BY	Decimal(9)		NOT NULL,
+	CREATE_TIME	DateTime		NOT NULL,
+	UPDATE_BY	Decimal(9)		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+	constraint SYS_ROLE_PK PRIMARY KEY CLUSTERED (ROLE_ID)
+)
+GO
+CREATE UNIQUE INDEX SYS_ROLE_IDX01 ON SYS_ROLE (ROLE_NO)
+GO
+
+PRINT 'CREATE TABLE SYS_USER_ROLE'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[SYS_USER_ROLE]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[SYS_USER_ROLE]
+GO
+
+CREATE TABLE SYS_USER_ROLE
+(
+	USER_ROLE_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	USER_ID	Decimal(9)		NOT NULL,
+	ROLE_NO	Nvarchar(20)		NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_BY	Decimal(9)		NOT NULL,
+	CREATE_TIME	DateTime		NOT NULL,
+	UPDATE_BY	Decimal(9)		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+	constraint SYS_USER_ROLE_PK PRIMARY KEY CLUSTERED (USER_ROLE_ID)
+)
+GO
+CREATE UNIQUE INDEX SYS_USER_ROLE_IDX01 ON SYS_USER_ROLE (USER_ID,ROLE_NO)
+GO
+
+PRINT 'CREATE TABLE SYS_WEB_MODULE'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[SYS_WEB_MODULE]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[SYS_WEB_MODULE]
+GO
+
+CREATE TABLE SYS_WEB_MODULE
+(
+	MODULE_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	MODULE_CODE	Nvarchar(20)		NOT NULL,
+	MODULE_TYPE	Nvarchar(10)		NOT NULL,
+	MODULE_NAME	Nvarchar(20)		NOT NULL,
+	MODULE_URL	Nvarchar(50)		NULL,
+	MODULE_FILE	Nvarchar(20)		NULL,
+	MODIFY_FILE	Nvarchar(20)		NULL,
+	PARENT_CODE	Nvarchar(20)		NOT NULL,
+  PICTURE_NAME	Nvarchar(50)		NULL,
+  SORT_NO	Decimal(9)	Default(1)	NOT NULL,
+	IS_GROUP	Int		NOT NULL,
+	IS_AVAILABLE	Int		NOT NULL,
+	constraint SYS_WEB_MODULE_PK PRIMARY KEY CLUSTERED (MODULE_ID)
+)
+GO
+CREATE UNIQUE INDEX SYS_WEB_MODULE_IDX01 ON SYS_WEB_MODULE (MODULE_CODE)
+GO
+
+PRINT 'CREATE TABLE SYS_FUNCTION'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[SYS_FUNCTION]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[SYS_FUNCTION]
+GO
+
+CREATE TABLE SYS_FUNCTION
+(
+	FUNCTION_ID	Nvarchar (20)		NOT NULL,
+	MODULE_CODE	Nvarchar(20)		NOT NULL,
+	FUNCTION_CODE	Decimal(9)		NOT NULL,
+	FUNCTION_NAME	Nvarchar(20)		NOT NULL,
+	IS_CUSTOM	Int	Default(0)	NOT NULL,
+	constraint SYS_FUNCTION_PK PRIMARY KEY CLUSTERED (FUNCTION_ID)
+)
+GO
+CREATE UNIQUE INDEX SYS_FUNCTION_IDX01 ON SYS_FUNCTION (MODULE_CODE,FUNCTION_CODE)
+GO
+
+PRINT 'CREATE TABLE SYS_PERM'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[SYS_PERM]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[SYS_PERM]
+GO
+
+CREATE TABLE SYS_PERM
+(
+	PERM_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	ROLE_NO	Nvarchar(20)		NOT NULL,
+	FUNCTION_ID	Nvarchar(20)		NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_BY	Decimal(9)		NOT NULL,
+	CREATE_TIME	DateTime		NOT NULL,
+	UPDATE_BY	Decimal(9)		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+	constraint SYS_PERM_PK PRIMARY KEY CLUSTERED (PERM_ID)
+)
+GO
+CREATE UNIQUE INDEX SYS_PERM_IDX01 ON SYS_PERM (ROLE_NO,FUNCTION_ID)
+GO
+
+PRINT 'CREATE TABLE SYS_LOGGER'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[SYS_LOGGER]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[SYS_LOGGER]
+GO
+
+CREATE TABLE SYS_LOGGER
+(
+	LOGGER_ID	Decimal(18)	IDENTITY (1,1)	NOT NULL,
+	LOG_DATE	DATETIME		NULL,
+	THREAD	Nvarchar(300)		NULL,
+	LEVEL	Nvarchar(50)		NULL,
+	LOGGER	Nvarchar(300)		NULL,
+	MESSAGE	Nvarchar(4000)		NULL,
+	EXCEPTION	Nvarchar(2000)		NULL,
+	constraint SYS_LOGGER_PK PRIMARY KEY CLUSTERED (LOGGER_ID)
+)
+GO
+
+PRINT 'CREATE TABLE SYS_NO'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[SYS_NO]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[SYS_NO]
+GO
+
+CREATE TABLE SYS_NO
+(
+	NO_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	NO_TYPE	Nvarchar(6)		NOT NULL,
+	YYMM	Nvarchar(6)		NOT NULL,
+	SERIALS	Decimal(8)		NOT NULL,
+	constraint SYS_NO_PK PRIMARY KEY CLUSTERED (NO_ID)
+)
+GO
+CREATE UNIQUE INDEX SYS_NO_IDX01 ON SYS_NO (NO_TYPE,YYMM)
+GO
+
+PRINT 'CREATE TABLE BASE_DIGIT'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[BASE_DIGIT]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[BASE_DIGIT]
+GO
+
+CREATE TABLE BASE_DIGIT
+(
+	DIGIT_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	COLUMN_CODE	Nvarchar(20)		NOT NULL,
+	FORM_NAME	Nvarchar(20)		NOT NULL,
+	COLUMN_DESC	Nvarchar(20)		NOT NULL,
+	DIGIT_LEN	Decimal(9)		NOT NULL,
+	REMARK	Nvarchar(100)		NULL,
+	UPDATE_BY	Decimal(9)		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+	constraint BASE_DIGIT_PK PRIMARY KEY CLUSTERED (DIGIT_ID)
+)
+GO
+CREATE UNIQUE INDEX BASE_DIGIT_IDX01 ON BASE_DIGIT (COLUMN_CODE,FORM_NAME)
+GO
+
+PRINT 'CREATE TABLE BASE_PARAM'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[BASE_PARAM]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[BASE_PARAM]
+GO
+
+CREATE TABLE BASE_PARAM
+(
+	PARAM_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	PARAM_CODE	Nvarchar(20)		NOT NULL,
+	PARAM_VALUE	Nvarchar(50)		NOT NULL,
+	PARAM_DESC	Nvarchar(500)		NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	UPDATE_BY	Decimal(9)		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+	constraint BASE_PARAM_PK PRIMARY KEY CLUSTERED (PARAM_ID)
+)
+GO
+CREATE UNIQUE INDEX BASE_PARAM_IDX01 ON BASE_PARAM (PARAM_CODE)
+GO
+
+
+
+PRINT 'CREATE TABLE USER_DEVICE'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[USER_DEVICE]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[USER_DEVICE]
+GO
+
+CREATE TABLE USER_DEVICE
+(
+	USER_DEVICE_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	USER_ID	Decimal(9)		NOT NULL,
+	DEVICE_TYPE	Int		NOT NULL,
+	IP	Nvarchar(20)		NULL,
+	TOKEN	Nvarchar(512)		NULL,
+	ACTIVE_TIME	DateTime		NOT NULL,
+	EXPIRED_TIME	DateTime		NOT NULL,
+	CREATE_TIME	DateTime		NOT NULL,
+	constraint USER_DEVICE_PK PRIMARY KEY CLUSTERED (USER_DEVICE_ID)
+)
+GO
+
+PRINT 'CREATE TABLE APP_TEMP'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_TEMP]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_TEMP]
+GO
+
+CREATE TABLE APP_TEMP
+(
+	FILE_ID	Decimal(9)	IDENTITY (10000,1)	NOT NULL,
+	FILE_TYPE	Nvarchar(10)		NOT NULL,
+	FILE_NAME	Nvarchar(50)		NOT NULL,
+	FILE_PATH	Nvarchar(200)		NOT NULL,
+	FILE_DESC	Nvarchar(200)		NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_TIME	Datetime		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+	constraint APP_TEMP_PK PRIMARY KEY CLUSTERED (FILE_ID)
+)
+GO
+
+--4.3.1.	附件管理
+PRINT 'CREATE TABLE APP_FILE'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_FILE]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_FILE]
+GO
+
+CREATE TABLE APP_FILE
+(
+  FILE_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+  REF_NO	Nvarchar(50)		NOT NULL,
+  FILE_NAME	Nvarchar(50)		NOT NULL,
+  FILE_TYPE	Nvarchar(20)		NOT NULL,
+  SEQ_NO	Decimal(9)		NOT NULL,
+  FILE_DESC	Nvarchar(200)		NULL,
+  IS_ENABLED	Int	Default(1)	NOT NULL,
+  REMARK	Nvarchar(200)		NULL,
+  UPDATE_TIME	DateTime		NOT NULL,
+  constraint APP_FILE_PK PRIMARY KEY CLUSTERED (FILE_ID)
+)
+GO
+
+
+--4.2.1.	省份管理
+PRINT 'CREATE TABLE BASE_PROVINCE'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[BASE_PROVINCE]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[BASE_PROVINCE]
+GO
+
+CREATE TABLE BASE_PROVINCE
+(
+	PROVINCE_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	PROVINCE_NO	Nvarchar (20)		NOT NULL,
+	PROVINCE_NAME	Nvarchar (20)		NOT NULL,
+	IS_ENABLED	int	Default(1)	NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	constraint BASE_PROVINCE_PK PRIMARY KEY CLUSTERED (PROVINCE_ID)
+)
+GO
+CREATE UNIQUE INDEX BASE_PROVINCE_IDX01 ON BASE_PROVINCE (PROVINCE_NO)
+GO
+
+--4.2.2.	城市管理
+PRINT 'CREATE TABLE BASE_CITY'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[BASE_CITY]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[BASE_CITY]
+GO
+
+CREATE TABLE BASE_CITY
+(
+	CITY_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	CITY_NO	Nvarchar (20)		NOT NULL,
+	CITY_NAME	Nvarchar (20)		NOT NULL,
+	PROVINCE_NO	Nvarchar (20)		NOT NULL,
+	INITIALS	Nvarchar (2)		NOT NULL,
+	IS_HOT		int	Default(0)	NOT NULL,
+	IS_ENABLED	int	Default(1)	NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	constraint BASE_CITY_PK PRIMARY KEY CLUSTERED (CITY_ID)
+)
+GO
+CREATE UNIQUE INDEX BASE_CITY_IDX01 ON BASE_CITY (CITY_NO)
+GO
+
+--4.2.3.	区县管理
+PRINT 'CREATE TABLE BASE_DISYRICT'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[BASE_DISYRICT]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[BASE_DISYRICT]
+GO
+
+CREATE TABLE BASE_DISYRICT
+(
+	DISYRICT_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	DISYRICT_NO	Nvarchar (20)		NOT NULL,
+	DISYRICT_NAME	Nvarchar (20)		NOT NULL,
+	CITY_NO	Nvarchar (20)		NOT NULL,
+	IS_ENABLED	int	Default(1)	NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	constraint BASE_DISYRICT_PK PRIMARY KEY CLUSTERED (DISYRICT_ID)
+)
+GO
+CREATE UNIQUE INDEX BASE_DISYRICT_IDX01 ON BASE_DISYRICT (DISYRICT_NO)
+GO
+---数据字典类目
+PRINT 'CREATE TABLE BASE_CLASS'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[BASE_CLASS]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[BASE_CLASS]
+GO
+
+CREATE TABLE BASE_CLASS
+(
+	CLASS_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	CLASS_NO	Nvarchar (20)		NOT NULL,
+	CLASS_NAME	Nvarchar (20)		NOT NULL,
+	SEQ_NO	Decimal(9)		NOT NULL,
+	IS_ENABLED	Int	Default(1)	NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	constraint BASE_CLASS_PK PRIMARY KEY CLUSTERED (CLASS_ID)
+)
+GO
+CREATE UNIQUE INDEX BASE_CLASS_IDX01 ON BASE_CLASS (CLASS_NO)
+GO
+---数据字典分类
+PRINT 'CREATE TABLE BASE_TYPE'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[BASE_TYPE]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[BASE_TYPE]
+GO
+
+CREATE TABLE BASE_TYPE
+(
+	TYPE_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	TYPE_NO	Nvarchar (20)		NOT NULL,
+	TYPE_NAME	Nvarchar (20)		NOT NULL,
+	CLASS_NO	Nvarchar (20)		NOT NULL,
+	SEQ_NO	Decimal(9)		NOT NULL,
+	IS_ENABLED	Int	Default(1)	NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	constraint BASE_TYPE_PK PRIMARY KEY CLUSTERED (TYPE_ID)
+)
+GO
+CREATE UNIQUE INDEX BASE_TYPE_IDX01 ON BASE_TYPE (TYPE_NO)
+GO
+
+
+PRINT 'CREATE TABLE APP_SETUP'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_SETUP]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_SETUP]
+GO
+
+CREATE TABLE APP_SETUP
+(
+	SETUP_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	SETUP_NAME	Nvarchar (20)		NOT NULL,
+	KEYWORDS	Nvarchar (100)		NULL,
+	DESCRIPTION	Nvarchar (200)		NULL,
+	LINK_MAN	Nvarchar (20)		NULL,
+	LINK_TEL	Nvarchar (20)		NULL,
+	IMAGE_ID	Decimal(9)		NULL,
+	IMAGE_ID1	Decimal(9)		NULL,
+	SERVICE_TEL	Nvarchar (50)		NULL,
+	COMPANY	Nvarchar (50)		NULL,
+	QR_ID	Decimal(9)		NULL,
+	COPYRIGHT	Nvarchar (200)		NULL,
+	RECORD	Nvarchar (50)		NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_TIME	DateTime		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+	constraint APP_SETUP_PK PRIMARY KEY CLUSTERED (SETUP_ID)
+)
+GO
+
+PRINT 'CREATE TABLE APP_LINK'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_LINK]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_LINK]
+GO
+
+CREATE TABLE APP_LINK
+(
+	LINK_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	IMAGE_ID	Decimal(9)		NULL,
+	LINK_NAME	Nvarchar (20)		NOT NULL,
+	LINK_URL	Nvarchar (200)		NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_TIME	DateTime		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+	constraint APP_LINK_PK PRIMARY KEY CLUSTERED (LINK_ID)
+)
+GO
+
+
+PRINT 'CREATE TABLE APP_ACTIVITY_ENROLL'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_ACTIVITY_ENROLL') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_ACTIVITY_ENROLL]
+GO
+
+CREATE TABLE APP_ACTIVITY_ENROLL
+(
+	ENROLL_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	ACTIVITY_NO	Nvarchar(20)		NOT NULL,
+	USER_NAME	Nvarchar (20)		NOT NULL,
+	COMPANY	Nvarchar (100)		NOT NULL,
+	POSITION	Nvarchar (20)		NOT NULL,
+	MOBILE	Nvarchar (11)		NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_TIME	DateTime		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+
+	constraint APP_ACTIVITY_ENROLL_PK PRIMARY KEY CLUSTERED (ENROLL_ID)
+)
+GO
+

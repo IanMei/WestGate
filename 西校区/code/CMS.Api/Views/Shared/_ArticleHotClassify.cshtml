@@ -1,0 +1,12 @@
+﻿@model IList<CMS.IService.FrontEnd.Article.Dto.FrontArticleTypeItem>
+<div class="hotservice">
+    <span>热门标签</span>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="/Article/Index/@Html.Encode(item.typeNo)_1_10">@Html.Encode(item.typeName)</a>
+            </li>
+        }
+    </ul>
+</div>

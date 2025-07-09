@@ -1,0 +1,34 @@
+﻿@model IList<CMS.IService.FrontEnd.Common.Dto.LessonItem>
+<div class="hy">
+    <div class="hy_tit">
+        <span>会员独享专区</span>
+        <dd>特聘讲师海量精选内容，每天进步亿点点</dd>
+        <hr />
+    </div>
+    <div class="hy_main">
+        <div class="hy_content">
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <a href="@Html.Encode("/Course/Details/" + item.courseId)">
+                            <img src="@Html.Encode(item.courseLogo)" />
+                            <div class="mine_class_words">
+                                <span>@Html.Encode(item.courseName)</span>
+                                @foreach (var tag in item.courseTags)
+                                {
+                                    <p>@Html.Encode(tag)</p>
+                                }
+                                <div class="mine_class_bot">
+                                    <dd>@Html.Encode(item.readTimes)人学过</dd>
+                                    <dt>VIP</dt>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <a href="/Course/Index" class="lookall">查看全部会员视频</a>
+</div>

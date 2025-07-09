@@ -1,0 +1,45 @@
+﻿@model IList<CMS.IService.FrontEnd.Common.Dto.CourseSceneDto>
+<div class="index_xcpx">
+    <div class="index_live_tit">
+        <span>现场培训</span>
+        <a href="/Train/Index" class="more">更多</a>
+    </div>
+    <div class="index-live_main">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <a href="/Train/Content/@Html.Encode(item.courseId)">
+                        <img src="@Html.Encode(item.courseLogo)" />
+                        <div class="live_words">
+                            <span>@Html.Encode(item.courseName)</span>
+                            <p>培训时间：@Html.Encode(item.courseDuration) | 报名人数: @Html.Encode(item.enrollment)人</p>
+                        </div>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+<div class="index_xcpx_class">
+    <div class="index_live_tit">
+        <span>现场培训</span>
+        <a href="/Train/Index" class="more">更多</a>
+    </div>
+    <div class="index_class_main">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <a href="/Train/Content/@Html.Encode(item.courseId)">
+                        <img src="@Html.Encode(item.courseLogo)" />
+                        <div class="live_words" style="width:96%;margin:0 auto;">
+                            <span style="line-height:2em;">@Html.Encode(item.courseName)</span>
+                            <p style="margin-bottom:5px;">培训时间：@Html.Encode(item.courseDuration)</p>
+                        </div>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

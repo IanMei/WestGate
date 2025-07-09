@@ -1,0 +1,30 @@
+﻿@model IList<CMS.IService.FrontEnd.Common.Dto.ArticleDto>
+<div class="index_xinwen">
+    <div class="index_live_tit">
+        <span>文章资讯</span>
+        <a href="/Article/Index" class="huan"></a>
+    </div>
+    <div class="index_xinwen_main">
+        @foreach (var item in Model)
+        {
+            <div class="index_xinwen_left">
+                <div class="index_xinwen_left_tit">
+                    <span>@Html.Encode(item.name)</span>
+                    <a href="@Html.Encode(item.url)" class="more">更多</a>
+                </div>
+                <ul>
+                    @foreach (var row in item.list)
+                    {
+                        <li>
+                            <a href="/Article/Content/@Html.Encode(row.id)">
+                                <dd>@Html.Encode(row.title)</dd>
+                            </a>
+                            <dt>@Html.Encode(row.time)</dt>
+
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+</div>

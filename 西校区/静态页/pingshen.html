@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>EIE League</title>
+<meta name="keywords" content="EIE League">
+<meta name="description" content="EIE League">
+
+
+<link type="text/css"  rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css">
+
+<script type="text/javascript" src="js/MSClass.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/swipe.js"></script>
+<script src="js/jquery-1.8.2.min.js"></script>
+
+<link type="text/css"  rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/lanrenzhijia.js"></script>
+
+<script type="text/javascript" src="js/uaredirect.js"></script>
+<script type="text/javascript">uaredirect("http://");</script>
+
+<script src="js/menu.js" type="text/javascript"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/slider.js"></script>
+<script type="text/javascript">
+		$(function () {
+			var bannerSlider = new Slider($('#banner_tabs'), {
+				time: 5000,
+				delay: 400,
+				event: 'hover',
+				auto: true,
+				mode: 'fade',
+				controller: $('#bannerCtrl'),
+				activeControllerCls: 'active'
+			});
+			$('#banner_tabs .flex-prev').click(function () {
+				bannerSlider.prev()
+			});
+			$('#banner_tabs .flex-next').click(function () {
+				bannerSlider.next()
+			});
+			var pageWidth = $(".flexslider").width();
+			/*var pageHeight = pageWidth / 16 * 9 ;*/
+			$(".flexslider").height(944);
+      $(".flexslider .slides a img").height(944);//$(window).height()
+  })
+</script>
+
+<script type="text/javascript">
+		var pageindex = $("#PAGEINDEX").val();
+		$(".menu li:eq("+pageindex+")").addClass("active home");
+</script>
+
+</head>
+<body>
+
+
+
+
+<div class="top">
+		<div class="top_2">
+				<div class="top_main">
+						<div class="top_logo">
+								<a href="index.html"><img src="images/logo.png"/></a>
+						</div>
+						<div class="top_nav">
+								<ul>
+										<li><a href="index.html">主页</a></li>
+										<li><a href="#" target="_blank">School-Wiki</a></li>
+										<li><a href="membership.html">会员学校</a></li>
+										<li class="on"><a href="pingshen.html">会员校长</a></li>
+										<!--<li><a href="resources.html">学生社团</a></li>-->
+										<li><a href="announcement.html">活动公告</a></li>
+										<li><a href="about.html">关于我们</a></li>
+										<li><a href="register.html">用户登录</a></li>
+										<li><a href="zhuce_pw.html">评委登录</a></li>
+								</ul>
+						</div>
+						<div class="top_login">
+								<span>语言</span>
+								<div class="flag"><img src="images/e.png" /></div>
+								<select>
+										<option><dd>中文CN</dd></option>
+								</select>
+						</div>
+				</div>
+		</div>
+</div>
+
+
+
+<div id="banner_tabs" class="flexslider">
+		<ul class="slides">
+			 <li><a><img width="100%" style="background:url(images/school.jpg) no-repeat center;"></a></li>
+			 <li><a><img width="100%" style="background:url(images/sa.jpg) no-repeat center;"></a></li>
+			 <li><a><img width="100%" style="background:url(images/ss.jpg) no-repeat center;"></a></li>
+			 <li><a><img width="100%" style="background:url(images/sd.jpg) no-repeat center;"></a></li>
+		</ul>
+		
+		<div class="flex_pingshen">
+				<div class="flex_pingshen_mid">
+						<h5>2022胡润百学·中国国际学校排行榜</h5>
+						<span>评选阶段启动</span>
+						<p>2022.11.0 - 2022.11.30</p>
+						<dd>
+						尊敬的各位评委先生/女士您好，诚邀您加入《2022胡润百学·中国国际学校排行榜》评审活动，并烦请您担任本年排名的评委。通过以下链接即可前往信息登记与问卷领取网址。<br/>
+						我们承诺评委关键个人信息保密和调研问卷保密，确保排名公正性。
+						</dd>
+						<a href="zhuce_pw.html">评委入口</a>
+				</div>
+		</div>
+		<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+			 <li><a></a></li>
+			 <li><a></a></li>
+			 <li><a></a></li>
+			 <li><a></a></li>
+		</ol>
+</div>
+
+
+
+
+
+<div class="zhuren">
+		<div class="zhuren_main">
+				<span>主任评委团</span>
+				<ul>
+						<li><a href="pingwei.html">
+								<img src="images/renxiang.jpg"/>
+								<div class="pingwei_right">
+										<dd><strong>朱大木</strong>&nbsp;/&nbsp;Bigthree Zhu</dd>
+										<dt>某国际学校集团&emsp;董事长</dt>
+										<dt>某教育集团&emsp;名誉顾问</dt>
+								</div>
+						</a></li>
+						<li><a href="pingwei.html">
+								<img src="images/renxiang.jpg"/>
+								<div class="pingwei_right">
+										<dd><strong>朱大木</strong>&nbsp;/&nbsp;Bigthree Zhu</dd>
+										<dt>某国际学校集团&emsp;董事长</dt>
+										<dt>某教育集团&emsp;名誉顾问</dt>
+								</div>
+						</a></li>
+						<li><a href="pingwei.html">
+								<img src="images/renxiang.jpg"/>
+								<div class="pingwei_right">
+										<dd><strong>朱大木</strong>&nbsp;/&nbsp;Bigthree Zhu</dd>
+										<dt>某国际学校集团&emsp;董事长</dt>
+										<dt>某教育集团&emsp;名誉顾问</dt>
+								</div>
+						</a></li>
+						<li><a href="pingwei.html">
+								<img src="images/renxiang.jpg"/>
+								<div class="pingwei_right">
+										<dd><strong>朱大木</strong>&nbsp;/&nbsp;Bigthree Zhu</dd>
+										<dt>某国际学校集团&emsp;董事长</dt>
+										<dt>某教育集团&emsp;名誉顾问</dt>
+								</div>
+						</a></li>
+						<li><a href="pingwei.html">
+								<img src="images/renxiang.jpg"/>
+								<div class="pingwei_right">
+										<dd><strong>朱大木</strong>&nbsp;/&nbsp;Bigthree Zhu</dd>
+										<dt>某国际学校集团&emsp;董事长</dt>
+										<dt>某教育集团&emsp;名誉顾问</dt>
+								</div>
+						</a></li>
+						<li><a href="pingwei.html">
+								<img src="images/renxiang.jpg"/>
+								<div class="pingwei_right">
+										<dd><strong>朱大木</strong>&nbsp;/&nbsp;Bigthree Zhu</dd>
+										<dt>某国际学校集团&emsp;董事长</dt>
+										<dt>某教育集团&emsp;名誉顾问</dt>
+								</div>
+						</a></li>
+						<a href="#" class="zhankai">点击继续展开</a>
+				</ul>
+		</div>
+</div>
+
+
+
+
+
+
+<div class="zhuren">
+		<div class="zhuren_main">
+				<span>特邀评委团</span>
+				<ul>
+						<li><a href="pingwei.html">
+								<img src="images/renxiang.jpg"/>
+								<div class="pingwei_right">
+										<dd><strong>朱大木</strong>&nbsp;/&nbsp;Bigthree Zhu</dd>
+										<dt>某国际学校集团&emsp;董事长</dt>
+										<dt>某教育集团&emsp;名誉顾问</dt>
+								</div>
+						</a></li>
+						<li><a href="pingwei.html">
+								<img src="images/renxiang.jpg"/>
+								<div class="pingwei_right">
+										<dd><strong>朱大木</strong>&nbsp;/&nbsp;Bigthree Zhu</dd>
+										<dt>某国际学校集团&emsp;董事长</dt>
+										<dt>某教育集团&emsp;名誉顾问</dt>
+								</div>
+						</a></li>
+						<li><a href="pingwei.html">
+								<img src="images/renxiang.jpg"/>
+								<div class="pingwei_right">
+										<dd><strong>朱大木</strong>&nbsp;/&nbsp;Bigthree Zhu</dd>
+										<dt>某国际学校集团&emsp;董事长</dt>
+										<dt>某教育集团&emsp;名誉顾问</dt>
+								</div>
+						</a></li>
+						<li><a href="pingwei.html">
+								<img src="images/renxiang.jpg"/>
+								<div class="pingwei_right">
+										<dd><strong>朱大木</strong>&nbsp;/&nbsp;Bigthree Zhu</dd>
+										<dt>某国际学校集团&emsp;董事长</dt>
+										<dt>某教育集团&emsp;名誉顾问</dt>
+								</div>
+						</a></li>
+						<li><a href="pingwei.html">
+								<img src="images/renxiang.jpg"/>
+								<div class="pingwei_right">
+										<dd><strong>朱大木</strong>&nbsp;/&nbsp;Bigthree Zhu</dd>
+										<dt>某国际学校集团&emsp;董事长</dt>
+										<dt>某教育集团&emsp;名誉顾问</dt>
+								</div>
+						</a></li>
+						<li><a href="pingwei.html">
+								<img src="images/renxiang.jpg"/>
+								<div class="pingwei_right">
+										<dd><strong>朱大木</strong>&nbsp;/&nbsp;Bigthree Zhu</dd>
+										<dt>某国际学校集团&emsp;董事长</dt>
+										<dt>某教育集团&emsp;名誉顾问</dt>
+								</div>
+						</a></li>
+				<a href="#" class="zhankai">点击继续展开</a>
+				</ul>
+		</div>
+</div>
+
+
+
+
+
+
+
+<div class="foot">
+		<div class="foot_main">
+				<div class="part">
+						<span>战略合作伙伴</span>
+						<ul>
+								<li><img src="images/logo2.png"/></li>
+								<li><img src="images/logo2.png"/></li>
+								<li><img src="images/logo2.png"/></li>
+								<li><img src="images/logo2.png"/></li>
+						</ul>
+				</div>
+				<div class="huiyuan">
+						<span>优质会员</span>
+						<ul>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+						</ul>
+				</div>
+				<div class="lx_rh">
+						<span>联系入会</span>
+						<div class="lx_left">
+								<dd>Tel：+86 51288888888</dd>
+								<dd>E-mail：qwerty@eie.com</dd>
+								<dd>Add：上海市某某路某某座某某室</dd>
+						</div>
+						<div class="lx_right">
+								<img src="images/ma.png"/>
+								<dt>微信公众号</dt>
+						</div>
+				</div>
+				<div class="beian"><a href="#">备案号：**************************</a></div>
+		</div>
+</div>
+
+
+
+
+<div class="dianzi"></div>
+<div class="phone_bottom">
+		<ul>
+				<li><a href="#"><img src="images/boa.png"/><dd>首页</dd></a></li>
+				<li><a href="#"><img src="images/boa.png"/><dd>课程</dd></a></li>
+				<li><a href="#"><img src="images/boa.png"/><dd>直播</dd></a></li>
+				<li><a href="#"><img src="images/boa.png"/><dd>文章</dd></a></li>
+				<li><a href="#"><img src="images/boa.png"/><dd>我的</dd></a></li>
+		</ul>
+</div>
+
+
+
+</body>
+</html>

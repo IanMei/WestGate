@@ -1,0 +1,4059 @@
+﻿@charset "utf-8";
+/*手机*/
+@media screen and (max-width:1279px) {
+    .pager {
+        clear: both;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .school_top {
+        display: none;
+    }
+
+    .foot {
+        display: none;
+    }
+
+    .class_mulu {
+        display: none;
+    }
+
+    .top {
+        display: none;
+    }
+
+    .beian {
+        display: none;
+    }
+
+    .nav-wrap {
+        display: none;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .flexslider {
+        display: none;
+    }
+
+
+
+    .dianzi {
+        width: 100%;
+        height: 66px;
+        overflow: hidden;
+    }
+
+    .phone_bottom {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        z-index: 81;
+        background: #fff;
+        padding: 8px 0 2px;
+        box-shadow: 0 -3px 8px rgba(0,0,0,0.12);
+    }
+
+        .phone_bottom ul li {
+            width: 20%;
+            float: left;
+            overflow: hidden;
+            text-align: center;
+        }
+
+            .phone_bottom ul li img {
+                width: 30px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .phone_bottom ul li dd {
+                font-size: 13px;
+                color: #666;
+                display: block;
+                line-height: 2em;
+            }
+
+
+    .my_file {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 50px 0 80px;
+    }
+
+    .my_file_main {
+        width: 96%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+
+
+    .download {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        background: #fff;
+        font-size: 14px;
+    }
+
+    .download_main {
+        width: 100%;
+        margin: 0px auto;
+        overflow: hidden;
+    }
+
+    .download_fenlei {
+        width: calc(100% - 20px);
+        margin: 10px auto 30px;
+        overflow: hidden;
+        box-shadow: 0 3px 9px rgba(0,0,0,0.08);
+        border-radius: 5px;
+    }
+
+    .download_fir {
+        width: 100%;
+        margin: 13px auto;
+        overflow: hidden;
+    }
+
+        .download_fir span {
+            font-size: 16px;
+            color: #111;
+            display: block;
+            line-height: 36px;
+            margin-left: 15px;
+            font-weight: bold;
+            width: 96%;
+        }
+
+        .download_fir ul {
+            width: 96%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+            .download_fir ul li {
+                width: auto;
+                overflow: hidden;
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 5px;
+            }
+
+                .download_fir ul li a {
+                    display: block;
+                    color: #777;
+                    padding: 1px 9px;
+                    line-height: 26px;
+                }
+
+                .download_fir ul li.np a {
+                    color: #4c93fd;
+                    background: #daecff;
+                    border-radius: 50px;
+                }
+
+    .download_sec {
+        width: 100%;
+        margin: 12px auto;
+        overflow: hidden;
+        border-top: 1px #dedede solid;
+        padding-top: 12px;
+    }
+
+        .download_sec span {
+            font-size: 16px;
+            color: #111;
+            display: block;
+            line-height: 36px;
+            margin-left: 15px;
+            font-weight: bold;
+            width: 96%;
+        }
+
+        .download_sec ul {
+            width: 96%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+            .download_sec ul li {
+                width: auto;
+                overflow: hidden;
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 5px;
+            }
+
+                .download_sec ul li a {
+                    display: block;
+                    color: #777;
+                    padding: 1px 9px;
+                    line-height: 26px;
+                }
+
+                .download_sec ul li.np a {
+                    color: #4c93fd;
+                    background: #daecff;
+                    border-radius: 50px;
+                }
+
+
+
+
+
+    .class_content {
+        width: 100%;
+        margin: 30px auto 10px;
+        overflow: hidden;
+    }
+
+        .class_content ul {
+            width: calc(100% - 20px);
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+            .class_content ul li {
+                width: 49%;
+                float: left;
+                overflow: hidden;
+                margin: 0 2% 15px 0;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+                background: #fff;
+                border-radius: 5px;
+            }
+
+                .class_content ul li:nth-child(2n) {
+                    margin-right: 0;
+                }
+
+                .class_content ul li a {
+                    display: block;
+                }
+
+                .class_content ul li img {
+                    width: 100%;
+                    display: block;
+                }
+
+    .class_words {
+        width: 90%;
+        margin: 3px auto 9px;
+        overflow: hidden;
+    }
+
+        .class_words span {
+            font-size: 14px;
+            color: #666;
+            display: block;
+            line-height: 24px;
+            min-height: 35px;
+            margin: 7px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .class_words p {
+            font-size: 13px;
+            color: #7eb7fc;
+            float: left;
+            display: inline-block;
+            background: #e5f3ff;
+            padding: 1px 3px;
+            margin-right: 10px;
+        }
+
+    .mine_class_bot {
+        width: 90%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+        .mine_class_bot dd {
+            font-size: 12px;
+            color: #aaa;
+            display: inline-block;
+            width: 50%;
+            float: left;
+            line-height: 28px;
+        }
+
+        .mine_class_bot dt {
+            font-size: 14px;
+            color: #f9745d;
+            display: inline-block;
+            width: 50%;
+            float: right;
+            text-align: right;
+            line-height: 28px;
+        }
+
+    .page {
+        width: 100%;
+        overflow: hidden;
+        margin: 15px 0 20px;
+    }
+
+        .page ul li {
+            width: auto;
+            float: left;
+            overflow: hidden;
+            text-align: center;
+            background: #e7e8e9;
+            margin-right: 4px;
+        }
+
+            .page ul li a {
+                display: block;
+                color: #444;
+                line-height: 34px;
+                padding: 0 12px;
+                font-size: 13px;
+            }
+
+            .page ul li.on {
+                background: #0052c2;
+            }
+
+                .page ul li.on a {
+                    color: #fff;
+                }
+
+    .page2 {
+        width: 70%;
+        overflow: hidden;
+        margin: 15px 0 20px;
+        float: right
+    }
+
+        .page2 ul li {
+            width: auto;
+            float: left;
+            overflow: hidden;
+            text-align: center;
+            background: #e7e8e9;
+            margin-right: 4px;
+            margin-bottom: 10px
+        }
+
+            .page2 ul li a {
+                display: block;
+                color: #444;
+                line-height: 34px;
+                padding: 0 12px;
+                font-size: 13px;
+            }
+
+            .page2 ul li.on {
+                background: #0052c2;
+            }
+
+                .page2 ul li.on a {
+                    color: #fff;
+                }
+
+
+
+
+    .offlinetrain_top {
+        width: 100%;
+        margin: 0px auto 15px;
+        overflow: hidden;
+        border-radius: 0 5px 5px 0;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        position: relative;
+    }
+
+        .offlinetrain_top > img {
+            width: 100%;
+            display: block;
+        }
+
+    .offlinetrain_mid {
+        width: 90%;
+        overflow: hidden;
+        margin: 10px auto;
+    }
+
+        .offlinetrain_mid span {
+            font-size: 18px;
+            color: #000;
+            display: block;
+            line-height: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .offlinetrain_mid > dd {
+            font-size: 13px;
+            color: #999;
+            display: inline-block;
+            float: left;
+            margin-right: 20px;
+        }
+
+    .biaoqian {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 12px;
+        float: left;
+    }
+
+        .biaoqian dt {
+            font-size: 12px;
+            color: #4c93fd;
+            background: #daecff;
+            display: inline-block;
+            padding: 2px 12px;
+            margin-right: 12px;
+        }
+
+    .teacher {
+        width: 50%;
+        overflow: hidden;
+        margin-top: 30px;
+        float: left;
+    }
+
+        .teacher ul li {
+            width: 60px;
+            overflow: hidden;
+            float: left;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+            .teacher ul li img {
+                width: 45px;
+                height: 45px;
+                border-radius: 60px;
+                display: block;
+                margin: 0 auto
+            }
+
+            .teacher ul li dd {
+                font-size: 13px;
+                color: #666;
+                display: block;
+                text-align: center;
+                margin: 0 auto;
+                line-height: 2em;
+            }
+
+
+    .offlinetrain_you2 {
+        width: 50%;
+        float: right;
+        overflow: hidden;
+        margin-top: 30px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+    }
+
+        .offlinetrain_you2 span {
+            display: block;
+            color: #ee0b02;
+            line-height: 44px;
+            text-align: center;
+            border-radius: 50px;
+            font-size: 24px;
+            float: right;
+            width: 55%;
+        }
+
+        .offlinetrain_you2 a {
+            display: block;
+            color: #fff;
+            line-height: 36px;
+            background: #ee0b02;
+            text-align: center;
+            border-radius: 50px;
+            font-size: 13px;
+            float: right;
+            width: 55%;
+        }
+
+
+
+    .class_thr {
+        width: calc(100% - 20px);
+        margin: 0 auto 20px;
+        overflow: hidden;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+        border-radius: 5px;
+        padding: 20px 10px;
+    }
+
+    .class_thr_tit {
+        width: 100%;
+        margin: 0 auto 15px;
+        overflow: hidden;
+        border-bottom: 1px #dedede solid;
+    }
+
+        .class_thr_tit ul li {
+            float: left;
+            width: 33.3%;
+            text-align: center;
+            overflow: hidden;
+        }
+
+            .class_thr_tit ul li a {
+                display: block;
+                line-height: 48px;
+                font-size: 16px;
+                color: #000;
+                border-bottom: 3px #fff solid;
+            }
+
+            .class_thr_tit ul li.pr a {
+                border-bottom: 5px #0052c2 solid;
+                font-weight: bold;
+                color: #0052c2;
+            }
+
+            .class_thr_tit ul li:hover a {
+                border-bottom: 5px #0052c2 solid;
+                font-weight: bold;
+                color: #0052c2;
+            }
+
+    .mulu {
+        width: 100%;
+        margin: 0 auto 10px;
+        overflow: hidden;
+    }
+
+        .mulu ul li {
+            width: 100%;
+            overflow: hidden;
+        }
+
+            .mulu ul li span {
+                font-size: 16px;
+                color: #000;
+                line-height: 56px;
+                background: #f6f6f6 url(../images/landi.png)no-repeat left center;
+                display: block;
+                padding-left: 25px
+            }
+
+    .yike {
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+        border-bottom: 1px #f1f2f3 solid;
+        display: block;
+    }
+
+        .yike dd {
+            font-size: 15px;
+            color: #444;
+            line-height: 56px;
+            width: 50px;
+            float: left;
+        }
+
+        .yike dt {
+            font-size: 15px;
+            color: #444;
+            line-height: 56px;
+            width: calc(100% - 130px);
+            float: left;
+            background: url(../images/bofang.png)no-repeat left center;
+            background-size: 20px;
+            padding-left: 30px;
+        }
+
+        .yike p {
+            font-size: 15px;
+            color: #444;
+            line-height: 56px;
+            width: 50px;
+            float: right;
+            text-align: right;
+        }
+
+
+
+
+    .pingfen {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .xypf {
+        width: 100%;
+        overflow: hidden;
+        border-bottom: 1px #dedede solid;
+        margin-bottom: 30px;
+    }
+
+        .xypf textarea {
+            width: calc(100% - 32px);
+            padding: 15px;
+            overflow: hidden;
+            border-radius: 6px;
+            height: 75px;
+            resize: none;
+            margin-bottom: 20px;
+            outline: none;
+            background: #f3f6fd;
+            border: 1px #dedede solid;
+            margin-top: 10px;
+        }
+
+        .xypf button {
+            border: none;
+            background: #0052c2;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 44px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 15px;
+            outline: none;
+            width: 120px;
+            display: block;
+            float: right;
+            margin-bottom: 30px;
+        }
+
+        .xypf span {
+            font-size: 18px;
+            color: #000;
+            display: block;
+            line-height: 2em;
+        }
+
+        .xypf dd {
+            font-size: 20px;
+            color: #000;
+            display: inline-block;
+            line-height: 2em;
+        }
+
+        .xypf img {
+            width: 100px;
+            margin-left: 10px;
+            margin-top: 3px
+        }
+
+        .xypf dd, img {
+            vertical-align: middle;
+        }
+
+    .pflist {
+        width: 100%;
+        overflow: hidden;
+    }
+
+        .pflist ul li {
+            width: 100%;
+            overflow: hidden;
+            border-bottom: 1px #dedede solid;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+            .pflist ul li > img {
+                width: 60px;
+                height: 60px;
+                float: left;
+                display: block;
+                border-radius: 90px;
+            }
+
+    .pf_right {
+        width: calc(100% - 80px);
+        float: right;
+        overflow: hidden;
+    }
+
+        .pf_right span {
+            font-size: 15px;
+            color: #000;
+            display: inline-block;
+            line-height: 28px;
+        }
+
+        .pf_right img {
+            width: 72px;
+            margin-left: 10px;
+        }
+
+        .pf_right dd {
+            font-size: 15px;
+            color: #555;
+            display: block;
+            line-height: 1.7em;
+        }
+
+        .pf_right dt {
+            font-size: 13px;
+            color: #999;
+            display: block;
+            line-height: 2.2em;
+        }
+
+
+
+
+    .download_content {
+        width: 100%;
+        margin: 30px auto 0px;
+        overflow: hidden;
+        border-radius: 5px;
+        padding: 10px 0 0px;
+    }
+
+    .download_half {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .download_half ul li {
+            width: 90%;
+            overflow: hidden;
+            margin: 0 auto 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+            .download_half ul li img {
+                display: block;
+                width: 70px;
+                float: left;
+                border-radius: 5px;
+                height: 70px;
+            }
+
+    .download_right {
+        width: calc(100% - 90px);
+        float: left;
+        margin-left: 20px;
+        overflow: hidden;
+    }
+
+        .download_right span {
+            font-size: 14px;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .download_right dd {
+            font-size: 12px;
+            color: #888;
+            display: inline-block;
+            float: left;
+            margin-right: 15px;
+        }
+
+            .download_right dd:nth-last-child(1) {
+                margin-right: 0;
+            }
+
+        .download_right dt {
+            font-size: 13px;
+            color: red;
+            display: block;
+            float: left;
+            margin-top: 12px;
+            width: 100%;
+        }
+
+    .mashang {
+        width: 80px;
+        float: right;
+        overflow: hidden;
+        font-size: 13px;
+        color: #fff;
+        background: #0052c2;
+        text-align: center;
+        line-height: 26px;
+        border-radius: 3px;
+        margin-top: 20px;
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+    }
+
+
+    .download_left {
+        width: 100%;
+        overflow: hidden;
+        margin: 0px auto;
+    }
+
+    .download_top {
+        width: calc(100% - 30px);
+        overflow: hidden;
+        border-radius: 5px;
+        margin: 0px auto 30px;
+        padding: 15px 15px 30px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    }
+
+        .download_top a {
+            display: block;
+            background: #0052c2 url(../images/yun.png)no-repeat 20px center;
+            background-size: 28px;
+            font-size: 15px;
+            color: #fff;
+            width: 88px;
+            padding-left: 60px;
+            line-height: 44px;
+            border-radius: 3px;
+            margin-top: 30px;
+        }
+
+    .download_title {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+        .download_title img {
+            width: 80px;
+            height: 75px;
+            display: block;
+            float: left;
+            margin-right: 15px;
+        }
+
+    .download_title_d {
+        width: calc(100% - 100px);
+        margin: 0 auto;
+        overflow: hidden;
+        float: right;
+    }
+
+        .download_title_d dd {
+            font-size: 18px;
+            color: #111;
+            display: block;
+            line-height: 1.5em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .download_title_d dt {
+            font-size: 14px;
+            color: #999;
+            display: block;
+            line-height: 1.8em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+    .download_neirong {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+        .download_neirong dd {
+            font-size: 14px;
+            color: #777;
+            display: inline-block;
+            line-height: 2em;
+            width: 50%;
+            float: left;
+        }
+
+
+
+    .download_bottom {
+        width: calc(100% - 30px);
+        overflow: hidden;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        border-radius: 5px;
+        margin: 0 0 20px 0px;
+        padding: 15px 15px 30px;
+        min-height: 200px;
+    }
+
+        .download_bottom span {
+            font-size: 22px;
+            color: #000;
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        .download_bottom dd {
+            font-size: 14px;
+            color: #777;
+            display: block;
+            line-height: 1.6em;
+        }
+
+    .dod_right {
+        width: 94%;
+        margin: 10px auto;
+        overflow: hidden;
+    }
+
+    .guangg {
+        display: none;
+    }
+
+    .hot_class {
+        width: 350px;
+        float: right;
+        overflow: hidden;
+    }
+
+        .hot_class span {
+            font-size: 20px;
+            color: #000;
+            display: block;
+            border-left: 6px #ee0b04 solid;
+            padding-left: 12px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .hot_class ul li {
+            width: 100%;
+            overflow: hidden;
+            margin: 13px 0;
+        }
+
+            .hot_class ul li a {
+                display: block;
+            }
+
+            .hot_class ul li img {
+                width: 140px;
+                height: 90px;
+                display: block;
+                float: left;
+                margin-right: 20px;
+                border-radius: 5px;
+            }
+
+    .class-you {
+        width: 190px;
+        overflow: hidden;
+        float: right;
+    }
+
+        .class-you dd {
+            font-size: 15px;
+            line-height: 22px;
+            color: #000;
+            overflow: hidden;
+            margin-top: 3px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .class-you dt {
+            font-size: 13px;
+            line-height: 22px;
+            color: #777;
+            margin-right: 20px;
+            overflow: hidden;
+            margin-top: 3px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .class-you p {
+            width: 55px;
+            text-align: center;
+            line-height: 28px;
+            color: #fff;
+            background: #0052c2;
+            padding: 0 15px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+
+
+    .login_bg {
+        width: 100%;
+        overflow: hidden;
+        background: url(../images/loginbg.jpg) no-repeat center center;
+        min-height: calc(100vh - 66px);
+    }
+
+    .login_bg_main {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .jilao {
+        width: 320px;
+        margin: 15px auto 0px;
+        overflow: hidden;
+    }
+
+        .jilao input {
+            margin-right: 5px;
+        }
+
+        .jilao a {
+            color: #0052c2;
+        }
+
+            .jilao a:hover {
+                text-decoration: underline;
+            }
+
+    .shoujizhuce {
+        width: 94%;
+        margin: 50px auto 0;
+        background: #fff;
+        overflow: hidden;
+        padding-bottom: 60px;
+    }
+
+    .denglu {
+        width: 94%;
+        ;
+        background: #fff;
+        overflow: hidden;
+        margin: 81px auto 10px;
+        padding-bottom: 42px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        border-radius: 5px;
+    }
+
+        .denglu h5 {
+            font-size: 22px;
+            display: block;
+            text-align: center;
+            line-height: 64px;
+            border-bottom: 1px #e5e5e5 solid;
+            color: #0052c2;
+        }
+
+        .denglu ul {
+            margin-top: 20px
+        }
+
+            .denglu ul li {
+                overflow: hidden;
+                position: relative;
+            }
+
+                .denglu ul li > input {
+                    border: 1px #d9d9d9 solid;
+                    margin: 8px auto;
+                    width: 285px;
+                    line-height: 44px;
+                    color: #333;
+                    padding-left: 13px;
+                    display: block;
+                    outline: none;
+                }
+
+    .forget {
+        line-height: 42px;
+        position: absolute;
+        right: 22px;
+        z-index: 12;
+        color: #0052c2;
+        top: 10px;
+        font-size: 14px;
+        padding: 0 18px;
+    }
+
+    .linshi {
+        width: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+    }
+
+        .linshi input {
+            border: 1px #d9d9d9 solid;
+            margin: 8px auto;
+            width: 160px;
+            line-height: 44px;
+            color: #333;
+            padding-left: 13px;
+            display: block;
+            outline: none;
+            float: left;
+        }
+
+    .send {
+        line-height: 46px;
+        position: absolute;
+        right: 0px;
+        z-index: 12;
+        color: #fff;
+        top: 8px;
+        font-size: 14px;
+        padding: 0 18px;
+        background: #0052c2;
+    }
+
+    .denglu > a {
+        display: block;
+        text-align: center;
+        line-height: 44px;
+        color: #fff;
+        background: #0052c2;
+        width: 320px;
+        margin: 18px auto 0;
+        font-size: 15px;
+    }
+
+    .cengj {
+        width: 320px;
+        margin: 10px auto 0;
+        overflow: hidden;
+        text-align: center;
+    }
+
+        .cengj dd {
+            font-size: 13px;
+            color: #666;
+            display: inline-block;
+        }
+
+            .cengj dd a {
+                color: #0052c2;
+            }
+
+
+
+    .timezhou {
+        width: 100%;
+        margin: 10px auto;
+        overflow: hidden;
+    }
+
+    .timezhou_main {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .timezhou_main ul {
+            background: url(../images/tiaozi.png)no-repeat center 48px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+            .timezhou_main ul li {
+                width: 25%;
+                float: left;
+                overflow: hidden;
+                text-align: center;
+            }
+
+                .timezhou_main ul li a {
+                    display: block;
+                    color: #555;
+                    background: url(../images/wobu.png)no-repeat center bottom;
+                    background-size: 30px;
+                    line-height: 40px;
+                    padding-bottom: 25px;
+                    font-size: 15px;
+                }
+
+                .timezhou_main ul li.now a {
+                    color: #0052c2;
+                    background: url(../images/boa.png)no-repeat center bottom;
+                    background-size: 30px;
+                }
+
+                .timezhou_main ul li:hover a {
+                    color: #0052c2;
+                    background: url(../images/boa.png)no-repeat center bottom;
+                    background-size: 30px;
+                }
+
+
+
+    .live {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .live_main {
+        width: 100%;
+        margin: 10px auto;
+        overflow: hidden;
+    }
+
+        .live_main h5 {
+            width: 95%;
+            font-size: 18px;
+            color: #222;
+            display: block;
+            line-height: 24px;
+            font-weight: normal;
+            margin: 0 auto 10px;
+        }
+
+        .live_main ul {
+            width: calc(100% - 20px);
+            margin: 0 auto;
+        }
+
+            .live_main ul li {
+                width: 100%;
+                overflow: hidden;
+                margin: 0 0 18px 0;
+            }
+
+                .live_main ul li a {
+                    display: block;
+                    cursor: pointer;
+                }
+
+                    .live_main ul li a img {
+                        width: 40%;
+                        display: block;
+                        float: left;
+                    }
+
+    .live_words {
+        width: 58%;
+        float: right;
+        overflow: hidden;
+    }
+
+        .live_words span {
+            font-size: 16px;
+            color: #333;
+            display: block;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+
+        .live_words p {
+            font-size: 13px;
+            color: #777;
+            display: inline-block;
+            padding: 1px 3px;
+            line-height: 20px;
+        }
+
+    .live_words_button {
+        width: 88px;
+        color: #fff;
+        background: #0052c2;
+        border: none;
+        line-height: 32px;
+        float: right;
+        cursor: pointer;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .zhujiang {
+        display: none
+    }
+
+    .zj2 {
+        width: 50%;
+        float: left;
+        overflow: hidden;
+        height: 32px;
+    }
+
+        .zj2 img {
+            width: 32px;
+            display: inline-block;
+            border-radius: 16px;
+            vertical-align: baseline;
+        }
+
+        .zj2 dt {
+            font-size: 13px;
+            color: #666;
+            display: inline-block;
+            line-height: 32px;
+            /*margin-left: 10px;*/
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: calc(100% - 40px);
+        }
+
+
+    .zhibo {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+        background-color: #1a1b1f;
+    }
+
+    .zhibo_main {
+        width: 90%;
+        margin: 30px auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+        .zhibo_main img {
+            width: 140px;
+            float: left;
+            overflow: hidden;
+        }
+
+    .zhibo_right {
+        width: calc(100% - 150px);
+        float: right;
+        overflow: hidden;
+    }
+
+        .zhibo_right span {
+            font-size: 16px;
+            color: #fff;
+            display: block;
+            line-height: 1.2em;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+    .zhibo_content {
+        display: none;
+    }
+
+    .zhibo_right dd {
+        display: none;
+    }
+
+    .c-auth__btn {
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 3px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 25px;
+        text-align: center;
+        word-wrap: break-word;
+        white-space: normal;
+        background: #0052c2;
+        font-size: 13px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+
+    .pex {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .pex_main {
+        width: 94%;
+        margin: 10px auto 20px;
+    }
+
+        .pex_main ul li {
+            width: 100%;
+            margin: 0px auto 25px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+
+            .pex_main ul li img {
+                width: 100%;
+                display: block;
+            }
+
+    .pex_right {
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .pex_right span {
+            font-size: 20px;
+            color: #000;
+            display: block;
+            line-height: 2.5em;
+        }
+
+        .pex_right > dd {
+            font-size: 13px;
+            color: #777;
+            display: inline-block;
+            float: left;
+            margin-right: 20px;
+            line-height: 28px;
+        }
+
+    .jj {
+        width: 100%;
+        overflow: hidden;
+        margin: 10px auto 15px;
+        font-size: 14px;
+        color: #666;
+        display: block;
+        float: left;
+        border-top: 1px #bababa dashed;
+        padding-top: 15px;
+        line-height: 1.7em;
+    }
+
+    .lj {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .lj a {
+            display: block;
+            width: 120px;
+            line-height: 36px;
+            text-align: center;
+            color: #fff;
+            background: #0052c2;
+            margin: 10px 0 20px;
+        }
+
+
+
+    .kongdemo {
+        text-align: center;
+        margin: 100px auto;
+    }
+
+
+        .kongdemo dd {
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+
+        .kongdemo a {
+            font-size: 15px;
+            color: #ee0b04;
+        }
+
+
+
+    .simoney {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        background: #f7f8fc url(../images/logo_gary.png)no-repeat bottom center;
+        height: 360px;
+    }
+
+    .simoney_main {
+        width: 100%;
+        overflow: hidden;
+        margin: 30px auto;
+    }
+
+        .simoney_main ul li {
+            width: 33.3%;
+            float: left;
+            overflow: hidden;
+            text-align: center;
+            margin: 6px auto 26px;
+        }
+
+            .simoney_main ul li img {
+                width: 40px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .simoney_main ul li dd {
+                font-size: 17px;
+                color: #000;
+                display: block;
+                line-height: 1.6em;
+            }
+
+            .simoney_main ul li dt {
+                font-size: 13px;
+                color: #888;
+                display: block;
+                line-height: 1.2em;
+            }
+
+
+
+    .vip {
+        display: none;
+    }
+
+
+    .vip2 {
+        width: 100%;
+        margin: 0px auto 10px;
+        overflow: hidden;
+    }
+
+    .vip2_main {
+        width: 96%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .vip2_main ul li {
+            width: 33.3%;
+            text-align: center;
+            overflow: hidden;
+            float: left;
+            border-radius: 8px;
+            padding: 10px 0 0;
+        }
+
+            .vip2_main ul li img {
+                display: block;
+                margin: 0 auto;
+                border-radius: 100px;
+                margin-bottom: 3px;
+                width: 56px;
+            }
+
+    .vip_right2 {
+        width: 100%;
+        float: right;
+        overflow: hidden;
+    }
+
+    .vip_right2 span {
+        font-size: 14px;
+        color: #000;
+        display: block;
+    }
+
+
+
+
+
+
+    .index-live {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        background: #f6f6f6;
+    }
+
+    .index-live_main {
+        width: 100%;
+        margin: 10px auto 8px;
+        overflow: hidden;
+    }
+
+        .index-live_main ul {
+            width: calc(100% - 20px);
+            margin: 0 auto;
+        }
+
+            .index-live_main ul h5 {
+                font-size: 18px;
+                color: #222;
+                display: block;
+                line-height: 36px;
+                margin-bottom: 20px;
+                font-weight: normal;
+            }
+
+            .index-live_main ul li {
+                width: 100%;
+                overflow: hidden;
+                margin: 0 0 10px 0;
+            }
+
+                .index-live_main ul li a {
+                    display: block;
+                }
+
+                    .index-live_main ul li a > img {
+                        width: 40%;
+                        display: block;
+                        float: left;
+                    }
+
+    .index_live_tit {
+        width: calc(100% - 20px);
+        margin: 5px auto 0;
+        overflow: hidden;
+    }
+
+        .index_live_tit span {
+            font-size: 24px;
+            color: #444;
+            line-height: 48px;
+            display: inline-block;
+            float: left;
+            width: 150px;
+        }
+
+    .more {
+        float: right;
+        overflow: hidden;
+        line-height: 50px;
+        padding-right: 30px;
+        background: url(../images/right.png)no-repeat right center;
+        background-size: 18px;
+        color: #777;
+        font-size: 15px;
+    }
+
+        .more:hover {
+            color: #777;
+        }
+
+
+    .index_live_tit2 {
+        position: relative;
+        padding-bottom: 30px;
+        width: calc(100% - 20px);
+        margin: 0px auto;
+        overflow: hidden;
+    }
+
+        .index_live_tit2 span {
+            font-size: 24px;
+            color: #444;
+            line-height: 48px;
+            display: inline-block;
+            float: left;
+            width: 150px;
+        }
+
+    .scroll::-webkit-scrollbar {
+        display: none
+    }
+    /*隐藏滚动条*/
+    .scroll {
+        width: 100%;
+        margin: 0 auto 0;
+        overflow-x: scroll;
+        display: -webkit-box;
+        display: flex;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0px;
+    }
+
+        .scroll li {
+            width: auto;
+            margin: 0 5px;
+            float: left;
+            overflow: hidden;
+            text-align: center;
+            -webkit-flex: 1 0 auto;
+            flex: 1 0 auto;
+        }
+
+            .scroll li a {
+                display: block;
+                font-size: 14px;
+                color: #888;
+                line-height: 36px;
+            }
+
+            .scroll li:nth-child(2n) {
+                margin: 0;
+            }
+
+    .index_class {
+        width: 100%;
+        margin: 10px auto;
+        overflow: hidden;
+    }
+
+    .index_class_main {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+        .index_class_main ul {
+            width: calc(100% - 20px);
+            margin: 0 auto;
+        }
+
+            .index_class_main ul li {
+                width: 49%;
+                float: left;
+                overflow: hidden;
+                margin: 0 2% 8px 0;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+                background: #fff;
+                border-radius: 5px;
+            }
+
+                .index_class_main ul li:nth-child(2n) {
+                    margin-right: 0;
+                }
+
+                .index_class_main ul li a {
+                    display: block;
+                }
+
+                .index_class_main ul li img {
+                    width: 100%;
+                    height: 100px;
+                    display: block;
+                }
+
+    .mine_class_words {
+        width: 92%;
+        margin: 3px auto;
+        overflow: hidden;
+    }
+
+        .mine_class_words span {
+            font-size: 14px;
+            color: #666;
+            display: block;
+            line-height: 20px;
+            min-height: 40px;
+            margin: 3px 0;
+            font-weight: bold;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+
+        .mine_class_words p {
+            font-size: 12px;
+            color: #7eb7fc;
+            float: left;
+            display: inline-block;
+            background: #e5f3ff;
+            padding: 1px 3px;
+            margin-right: 10px;
+        }
+
+    .mine_class_bot {
+        width: 100%;
+        overflow: hidden;
+        float: left;
+    }
+
+        .mine_class_bot dd {
+            font-size: 12px;
+            color: #aaa;
+            display: inline-block;
+            width: 50%;
+            float: left;
+            line-height: 28px;
+        }
+
+        .mine_class_bot dt {
+            font-size: 14px;
+            color: #f9745d;
+            display: inline-block;
+            width: 50%;
+            float: right;
+            text-align: right;
+            line-height: 28px;
+        }
+
+
+
+
+
+    .hy {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        background: #f0f0f0;
+        padding-bottom: 24px;
+    }
+
+    .hy_main {
+        width: 100%;
+        margin: 10px auto 15px;
+        overflow: hidden
+    }
+
+    .hy_tit {
+        width: calc(100% - 30px);
+        margin: 25px auto 0;
+        overflow: hidden;
+        text-align: center;
+    }
+
+        .hy_tit span {
+            font-size: 24px;
+            color: #222;
+            display: block;
+            line-height: 26px;
+            margin-bottom: 9px;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .hy_tit dd {
+            font-size: 14px;
+            color: #999;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .hy_tit hr {
+            margin: 0 auto;
+            border: none;
+            background: #0052c2;
+            height: 4px;
+            width: 48px;
+        }
+
+
+    .hy_content {
+        width: 100%;
+        margin: 10px auto 0;
+        overflow: hidden;
+    }
+
+        .hy_content ul {
+            width: calc(100% - 20px);
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+            .hy_content ul li {
+                width: 49%;
+                float: left;
+                overflow: hidden;
+                margin: 0 2% 10px 0;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+                background: #fff;
+                border-radius: 5px;
+            }
+
+                .hy_content ul li:nth-child(2n) {
+                    margin-right: 0;
+                }
+
+                .hy_content ul li a {
+                    display: block;
+                }
+
+                .hy_content ul li img {
+                    width: 100%;
+                    height:100px;
+                    display: block;
+                }
+
+    .lookall {
+        width: 180px;
+        margin: 0 auto;
+        overflow: hidden;
+        color: #fff;
+        font-size: 14px;
+        line-height: 3em;
+        background: #0052c2;
+        display: block;
+        text-align: center
+    }
+
+
+    .partlogo {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+
+    .partlogo_main {
+        width: 94%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+        .partlogo_main ul li {
+            width: 30%;
+            float: left;
+            overflow: hidden;
+            text-align: center;
+            margin: 9px 1.33%;
+        }
+
+            .partlogo_main ul li img {
+                display: block;
+                height:40px;
+                width: 100%;
+            }
+
+
+    .index-mingshi {
+        width: 100%;
+        margin: 5px auto;
+        overflow: hidden;
+    }
+
+    .mingshi_main {
+        /*width: 94%;
+        overflow: hidden;
+        margin: 0 auto 18px;*/
+        display:none;
+    }
+
+    .scroll3::-webkit-scrollbar {
+        display: none
+    }
+    /*隐藏滚动条*/
+    .scroll3 {
+        display: block;
+        width: 96%;
+        margin: 0 2% 0;
+        overflow-x: scroll;
+        display: -webkit-box;
+        display: flex;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        /*position: absolute;
+        top: 64px;*/
+        padding: 10px 0
+    }
+
+        .scroll3 li {
+            width: 72%;
+            margin: 0 1%;
+            float: left;
+            overflow: hidden;
+            text-align: center;
+            -webkit-flex: 1 0 auto;
+            flex: 1 0 auto;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+            padding: 20px 3%;
+            border-radius: 10px;
+        }
+
+            .scroll3 li img {
+                width: 88px;
+                height: 88px;
+                display: block;
+                border-radius: 77px;
+                float: left;
+            }
+
+    .cena {
+        width: calc(100% - 114px);
+        float: right;
+        overflow: hidden;
+        text-align: left;
+    }
+
+        .cena span {
+            font-size: 17px;
+            color: #111;
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .cena dd {
+            font-size: 13px;
+            color: #666;
+            display: block;
+            line-height: 1.8em;
+        }
+
+        .cena dt {
+            font-size: 13px;
+            color: #666;
+            display: block;
+            line-height: 1.8em;
+        }
+
+            .cena dt p {
+                color: red;
+                display: inline-block;
+                margin-right: 2px;
+                font-size: 14px;
+            }
+
+        .cena dt, p {
+            vertical-align: bottom
+        }
+
+
+
+
+        /*.mingshi_main ul {
+            width: 100%;
+            margin: 20px auto;
+        }
+
+            .mingshi_main ul li {
+                width: 100%;
+                overflow: hidden;
+                margin-bottom: 18px;
+            }
+
+                .mingshi_main ul li img {
+                    width: 35%;
+                    float: left;
+                    display: block;
+                }
+
+                .mingshi_main ul li span {
+                    font-size: 18px;
+                    color: #111;
+                    display: block;
+                    line-height: 2em;
+                    text-align: left;
+                    margin-left: 5%;
+                    width: 60%;
+                    float: right;
+                }
+
+                .mingshi_main ul li dd {
+                    font-size: 14px;
+                    color: #333;
+                    display: block;
+                    line-height: 1.6em;
+                    text-align: left;
+                    margin-left: 5%;
+                    width: 60%;
+                    float: right;
+                }
+
+                .mingshi_main ul li dt {
+                    display: none;
+                }*/
+
+
+
+
+    .index_xinwen {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        background: #f7f8fc;
+    }
+
+    .huan {
+        float: right;
+        overflow: hidden;
+        line-height: 50px;
+        padding-left: 30px;
+        background: url(../images/huan.png)no-repeat left center;
+        background-size: 18px;
+        color: #777;
+        font-size: 15px;
+    }
+
+        .huan:hover {
+            color: #777
+        }
+
+    .index_xinwen_main {
+        width: 94%;
+        margin: 0 auto 20px;
+        overflow: hidden;
+    }
+
+    .index_xinwen_left {
+        width: calc(100% - 30px);
+        background: #fff;
+        overflow: hidden;
+        border-radius: 5px;
+        padding: 8px 15px 15px;
+        margin-bottom: 15px
+    }
+
+        .index_xinwen_left:nth-child(2n) {
+            margin-right: 0;
+        }
+
+    .index_xinwen_left_tit {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .index_xinwen_left_tit span {
+            font-size: 22px;
+            color: #333;
+            display: inline-block;
+            float: left;
+            padding-left: 15px;
+            border-left: 7px #0052c2 solid;
+            margin-top: 13px;
+            line-height: 22px;
+        }
+
+    .index_xinwen_left ul li {
+        width: 100%;
+        overflow: hidden;
+    }
+
+        .index_xinwen_left ul li dd {
+            font-size: 14px;
+            color: #222;
+            display: block;
+            width: 70%;
+            float: left;
+            line-height: 32px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .index_xinwen_left ul li dt {
+            font-size: 12px;
+            color: #888;
+            display: block;
+            width: 30%;
+            float: right;
+            line-height: 32px;
+            text-align: right;
+        }
+
+    .clearfloat {
+        padding-bottom: 0px;
+    }
+    /* banner */
+    /*.banner2{width: 94%;overflow: hidden;position: relative;margin: 0 auto;border-radius: 5px;}
+.banner2 img{ width: 100%;}
+.banner2 ul li{width: 100%; position: relative;}
+.banner2>ol{height: 20px;position: relative;z-index: 10;width: 20%;left: 40%;bottom: 0px;margin-top: -19px;text-align: center;}
+.banner2>ol>li{display: inline-block;margin: 5%;width: 10px;height:3px;background-color: #fff;opacity: 0.9;border-radius: 5px;}
+.banner2>ol>li.on{background-color: #2162ae;}
+.clearfloat:after{display: block;clear: both;content: "";visibility: hidden;height: 0;}
+.clearfloat{zoom: 1;}*/
+    .saoa {
+        width: 94%;
+        margin: 10px auto;
+        overflow: hidden;
+    }
+
+        .saoa input {
+            width: calc(100% - 62px);
+            border: 1px #ccc solid;
+            border-right: none;
+            border-radius: 5px 0 0 5px;
+            line-height: 36px;
+            padding-left: 20px;
+            display: inline-block;
+            outline: none;
+            float: left;
+        }
+
+    .diwo {
+        width: 40px;
+        border: 1px #ccc solid;
+        border-left: none;
+        border-radius: 0 5px 5px 0;
+        display: inline-block;
+        float: left;
+    }
+
+        .diwo img {
+            width: 28px;
+            margin-left: 5px;
+            padding: 4px 0;
+        }
+
+
+
+    .seo {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .seo_main {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .seo_left {
+        width: 100%;
+        float: left;
+        overflow: hidden;
+    }
+
+    .seo_fenlei {
+        width: 30%;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 5px;
+        height: calc(100vh - 66px);
+        position: fixed;
+    }
+
+        .seo_fenlei ul {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+            .seo_fenlei ul li {
+                width: auto;
+                overflow: hidden;
+                margin: 5px 7px;
+                float: left;
+            }
+
+                .seo_fenlei ul li a {
+                    display: block;
+                    font-size: 13px;
+                    color: #444;
+                    line-height: 28px;
+                    padding: 0 15px;
+                }
+
+                .seo_fenlei ul li.np a {
+                    color: #fff;
+                    background: #0052c2;
+                    border-radius: 60px;
+                }
+
+                .seo_fenlei ul li:hover a {
+                    color: #fff;
+                    background: #0052c2;
+                    border-radius: 60px;
+                }
+
+
+    .seo_list {
+        width: 70%;
+        overflow: hidden;
+        float: right;
+    }
+
+        .seo_list h5 {
+            font-size: 20px;
+            color: #000;
+            display: block;
+        }
+
+        .seo_list ul li {
+            width: 100%;
+            overflow: hidden;
+            margin: 10px 0 10px;
+            border-bottom: 1px #dedede solid;
+        }
+
+            .seo_list ul li a {
+                display: block;
+            }
+
+            .seo_list ul li img {
+                display: none;
+            }
+
+    .seo_title {
+        width: 90%;
+        margin: 0px auto 20px;
+        overflow: hidden;
+        float: right;
+        margin-right: 20px;
+    }
+
+        .seo_title span {
+            font-size: 17px;
+            line-height: 28px;
+            color: #111;
+            padding-top: 8px;
+            font-weight: bold;
+        }
+
+        .seo_title p {
+            font-size: 12px;
+            line-height: 28px;
+            color: #666;
+            float: right;
+        }
+
+        .seo_title dt {
+            font-size: 12px;
+            line-height: 28px;
+            color: #4678cd;
+            float: left;
+            background: #dce9fc;
+            padding: 0 10px;
+            margin-right: 10px;
+        }
+
+        .seo_title dd {
+            height: 45px;
+            font-size: 13px;
+            line-height: 24px;
+            color: #666;
+            margin: 5px 0 22px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+
+
+
+    .seo_right {
+        display: none;
+    }
+
+
+
+
+    .news_content {
+        width: 94%;
+        margin: 15px auto 0;
+        overflow: hidden;
+    }
+
+        .news_content h1 {
+            font-size: 22px;
+            color: #000;
+            display: block;
+            text-align: left;
+            line-height: 44px;
+            margin-bottom: 10px;
+        }
+
+        .news_content dd {
+            font-size: 13px;
+            color: #666;
+            text-align: left;
+            overflow: hidden;
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 15px;
+        }
+
+    .zhengjdi {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .zhengjdi span {
+            display: block;
+            font-size: 14px;
+            color: #222;
+            line-height: 2em;
+            width: 100%;
+        }
+
+        .zhengjdi img {
+            max-width: 100%;
+            display: block;
+            margin: 18px 0;
+        }
+
+    .updown {
+        width: 94%;
+        overflow: hidden;
+        margin: 25px auto;
+    }
+
+        .updown a {
+            font-size: 14px;
+            color: #000;
+            line-height: 40px;
+            display: block;
+            padding: 0 3%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            background: #eee;
+            margin-bottom: 10px
+        }
+
+
+
+    .xgts {
+        width: 94%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+        .xgts ul li {
+            width: 100%;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+            .xgts ul li img {
+                width: 30%;
+                display: block;
+                border-radius: 5px;
+                float: left;
+            }
+
+            .xgts ul li a {
+                display: block;
+                float: left;
+            }
+
+            .xgts ul li dd {
+                font-size: 15px;
+                color: #111;
+                display: block;
+                line-height: 1.8em;
+                width: 66%;
+                float: right;
+                text-align: left
+            }
+
+    .shengming {
+        width: calc(94% - 30px);
+        margin: 0 auto 20px;
+        overflow: hidden;
+        border: 1px #dedede dashed;
+        padding: 15px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+
+
+    .my_file {
+        display: none;
+    }
+
+    .my_file_phone {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 0px 0 30px;
+    }
+
+    .my_file_phone_main {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .file_left {
+        width: 100%;
+        float: left;
+        overflow: hidden;
+    }
+
+    .file_top {
+        width: 100%;
+        background: #fff;
+        overflow: hidden;
+        text-align: center;
+        padding: 22px 0 22px;
+    }
+
+        .file_top img {
+            width: 81px;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 7px;
+            border-radius: 100px;
+        }
+
+        .file_top dd {
+            font-size: 17px;
+            color: #000;
+            display: block;
+            line-height: 36px;
+            font-weight: bold;
+        }
+
+        .file_top dt {
+            font-size: 14px;
+            color: #888;
+            display: block;
+        }
+
+    .file_bottom {
+        width: 100%;
+        background: #fff;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+    .someone {
+        width: 100%;
+        background: #fff;
+        overflow: hidden;
+        font-size: 14px;
+    }
+
+        .someone ul li {
+            border-bottom: 1px #e1e2e3 solid;
+        }
+
+            .someone ul li a {
+                padding: 0 30px;
+                width: calc(100% -60px);
+                background: #fff;
+                color: #000;
+                line-height: 52px;
+                display: block;
+                font-size: 15px;
+            }
+
+            .someone ul li a {
+                background: #fff url(../images/di.jpg) no-repeat left center;
+            }
+
+
+    .file_right {
+        display: none;
+    }
+
+    .file_right {
+        width: 94%;
+        margin: 0 auto;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .file_title {
+        width: 100%;
+        overflow: hidden;
+        border-bottom: 1px #e1e2e3 solid;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+
+        .file_title ul li {
+            width: 30%;
+            float: left;
+            text-align: center;
+            overflow: hidden;
+            margin: 0 10%
+        }
+
+            .file_title ul li a {
+                color: #999;
+                display: block;
+                line-height: 48px;
+            }
+
+            .file_title ul li.present a {
+                color: #000;
+                border-bottom: 3px #0052c2 solid;
+                font-size: 14px;
+            }
+
+
+    .max_list {
+        width: 100%;
+        margin: 0 auto 20px;
+        overflow: hidden;
+    }
+
+        .max_list > button {
+            border: none;
+            background: #0052c2;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 44px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 15px;
+            outline: none;
+            margin: 0 auto;
+            width: 200px;
+            display: block;
+        }
+
+        .max_list > a {
+            border: 1px #333 solid;
+            background: #fff;
+            border-radius: 50px;
+            text-align: center;
+            line-height: 44px;
+            color: #000;
+            cursor: pointer;
+            font-size: 16px;
+            outline: none;
+            margin: 0 auto;
+            width: 210px;
+            display: block;
+            float: left;
+            margin-left: 30px;
+        }
+
+        .max_list ul {
+            width: 100%;
+            margin-bottom: 2vh;
+            overflow: hidden;
+            padding: 0;
+        }
+
+            .max_list ul li {
+                width: 100%;
+                margin: 0px auto;
+                overflow: hidden;
+                margin-bottom: 5px;
+            }
+
+
+
+    .topest {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .toux {
+        width: 91px;
+        height: 91px;
+        border-radius: 200px;
+        position: relative;
+        display: block;
+        outline: none;
+        margin: 0 auto;
+        border: none;
+        overflow: hidden;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+        cursor: pointer;
+    }
+
+        .toux img {
+            width: 91px;
+            height: 91px;
+            display: block;
+            border-radius: 200px;
+        }
+
+    .topest dt {
+        font-size: 14px;
+        color: #fff;
+        background: rgba(0,0,0,.5);
+        position: absolute;
+        bottom: 0;
+        display: block;
+        left: 0px;
+        width: 91px;
+        text-align: center;
+        line-height: 28px;
+    }
+
+    .max_left {
+        width: 64px;
+        float: left;
+        overflow: hidden;
+    }
+
+        .max_left.xing dd:before {
+            content: '*';
+            color: red;
+            display: inline-block;
+            border-radius: 50%;
+            vertical-align: middle;
+            position: absolute;
+            left: 0;
+            top: 0
+        }
+
+        .max_left dd {
+            text-align: right;
+            display: inline-block;
+            line-height: 44px;
+            color: #333;
+            font-size: 14px;
+            overflow: hidden;
+            float: right;
+            position: relative;
+        }
+
+    .max_right {
+        width: calc(100% - 78px);
+        float: right;
+        overflow: hidden;
+        padding-bottom: 1px;
+    }
+
+        .max_right select {
+            width: 150px;
+            border: none;
+            line-height: 40px;
+            height: 40px;
+            border-radius: 5px;
+            padding: 0 0 0 25px;
+            float: left;
+            margin-right: 20px;
+            margin-top: 7px;
+            outline: none;
+            resize: none;
+            appearance: none;
+            background: #f6f6f6 url(../images/arrow.png) no-repeat scroll 96% center;
+            background-size: 24px;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .max_right option {
+            display: block;
+            color: #000;
+            line-height: 40px;
+            outline: none;
+        }
+
+        .max_right > input {
+            width: 550px;
+            background: #f6f6f6;
+            border: none;
+            line-height: 40px;
+            border-radius: 5px;
+            padding: 0 20px;
+            float: left;
+            margin-top: 2px;
+            outline: none;
+            resize: none;
+        }
+
+        .max_right > span {
+            display: block;
+            width: 100%;
+            float: left;
+            margin-top: 20px;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .max_right > dd {
+            display: block;
+            width: 100%;
+            float: left;
+            line-height: 44px;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .max_right label {
+            min-width: 80px;
+            line-height: 22px;
+            float: left;
+            display: inline-block;
+            color: #333;
+            margin-left: 3px;
+            margin-top: 11px;
+            margin-right: 20px;
+            font-size: 15px;
+        }
+
+    .yuan {
+        width: 18px;
+        height: 18px;
+        appearance: none;
+        position: relative;
+        margin-right: 5px;
+        outline: none;
+        resize: none;
+    }
+
+        .yuan:before {
+            content: '';
+            width: 14px;
+            height: 14px;
+            border: 1px #7d7d7d solid;
+            display: inline-block;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        .yuan:checked:before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border: 1px solid #409eff;
+            background: #409eff;
+            display: inline-block;
+            border-radius: 50%;
+            vertical-align: middle;
+            position: absolute;
+            top: -1px;
+        }
+
+        .yuan:checked:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            text-align: center;
+            display: block;
+            position: absolute;
+            top: 4px;
+            left: 5px;
+            vertical-align: middle;
+            background: #fff;
+            border-radius: 50px;
+        }
+
+        .yuan:checked + label {
+            color: #409eff;
+        }
+
+
+
+
+    .mine_class {
+        width: 94%;
+        margin: 15px auto
+    }
+
+        .mine_class ul li {
+            width: 100%;
+            overflow: hidden;
+            margin: 0 0 15px 0;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+            background: #fff;
+            border-radius: 5px;
+        }
+
+            .mine_class ul li a {
+                display: block;
+            }
+
+            .mine_class ul li img {
+                width: 100%;
+                display: none;
+            }
+
+
+
+    .mine_indent {
+        width: 94%;
+        margin: 10px auto 10px;
+        overflow: hidden;
+    }
+
+        .mine_indent ul li {
+            width: calc(100% - 2px);
+            border: 1px #dedede solid;
+            overflow: hidden;
+            margin-bottom: 18px;
+        }
+
+    .mine_indent_up {
+        width: 100%;
+        overflow: hidden;
+        background: #f7f7f7;
+        margin-bottom: 10px;
+    }
+
+        .mine_indent_up dd {
+            font-size: 13px;
+            color: #444;
+            display: block;
+            line-height: 35px;
+            float: left;
+            margin-left: 16px;
+        }
+
+        .mine_indent_up dt {
+            font-size: 13px;
+            color: #444;
+            display: block;
+            line-height: 35px;
+            float: right;
+            margin-right: 16px;
+        }
+
+    .mine_indent_down {
+        width: calc(100% - 30px);
+        overflow: hidden;
+        margin: 0 auto 20px;
+        padding: 0 15px;
+    }
+
+    .mine_indent_left {
+        width: 65%;
+        float: left;
+        overflow: hidden;
+        border-right: 1px #cfcfcf solid;
+    }
+
+        .mine_indent_left img {
+            width: 120px;
+            height: 71px;
+            display: none;
+        }
+
+    .mine_indent_details {
+        width: 100%;
+        float: left;
+        overflow: hidden;
+    }
+
+        .mine_indent_details span {
+            font-size: 16px;
+            color: #111;
+            display: block;
+            line-height: 2em;
+            font-weight: bold;
+        }
+
+        .mine_indent_details dd {
+            font-size: 13px;
+            color: #666;
+            display: block;
+            line-height: 1.7em;
+        }
+
+    .mine_indent_right {
+        width: calc(35% - 1px);
+        overflow: hidden;
+    }
+
+        .mine_indent_right a {
+            display: block;
+            width: 90px;
+            text-align: center;
+            color: #fff;
+            line-height: 28px;
+            background: #0052c2;
+            border-radius: 3px;
+            margin: 5px auto 0;
+        }
+
+    .pay {
+        width: 100%;
+        overflow: hidden;
+        text-align: center
+    }
+
+        .pay dd {
+            font-size: 14px;
+            color: #666;
+            display: block;
+            line-height: 22px;
+        }
+
+        .pay dt {
+            font-size: 14px;
+            color: red;
+            display: block;
+            line-height: 22px;
+        }
+
+
+
+    .watched {
+        width: 94%;
+        margin: 0 auto 20px;
+        overflow: hidden;
+    }
+
+        .watched ul li {
+            width: 100%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+            .watched ul li a {
+                display: block;
+            }
+
+            .watched ul li img {
+                width: 120px;
+                height: 80px;
+                display: block;
+                float: left;
+            }
+
+    .watched_right {
+        width: calc(100% - 135px);
+        float: right;
+        overflow: hidden;
+        border-bottom: 1px #dedede solid;
+    }
+
+        .watched_right span {
+            font-size: 16px;
+            color: #111;
+            display: block;
+            line-height: 2em;
+            font-weight: bold;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .watched_right p {
+            font-size: 13px;
+            color: #444;
+            float: left;
+            display: block;
+            padding: 1px 3px;
+            width: 100%;
+        }
+
+    .watched_bot {
+        width: 100%;
+        overflow: hidden;
+    }
+
+        .watched_bot dd {
+            font-size: 13px;
+            color: #888;
+            display: inline-block;
+            width: 100%;
+            line-height: 28px;
+        }
+
+        .watched_bot dt {
+            display: none;
+        }
+
+
+    .feedback {
+        width: 94%;
+        margin: 15px auto 40px;
+        overflow: hidden;
+    }
+
+        .feedback textarea {
+            width: calc(100% - 32px);
+            padding: 15px;
+            overflow: hidden;
+            border-radius: 6px;
+            height: 120px;
+            resize: none;
+            margin-bottom: 20px;
+            outline: none;
+        }
+
+        .feedback button {
+            border: none;
+            background: #0052c2;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 44px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 15px;
+            outline: none;
+            width: 200px;
+            display: block;
+        }
+
+    .phone_bottom {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        z-index: 81;
+        background: #fff;
+        box-shadow: 0 -3px 8px rgba(0,0,0,0.08);
+        height: 50px;
+        font-size: 14px;
+    }
+
+        .phone_bottom ul li {
+            width: 20%;
+            float: left;
+            overflow: hidden;
+            text-align: center;
+            height: 50px;
+        }
+
+            .phone_bottom ul li:nth-child(1) {
+                background: url(../images/index_gary.png)no-repeat center 3px;
+                background-size: 27px
+            }
+
+            .phone_bottom ul li:nth-child(2) {
+                background: url(../images/class_gary.png)no-repeat center 3px;
+                background-size: 27px
+            }
+
+            .phone_bottom ul li:nth-child(3) {
+                background: url(../images/zhibo_gary.png)no-repeat center 3px;
+                background-size: 27px
+            }
+
+            .phone_bottom ul li:nth-child(4) {
+                background: url(../images/art_gary.png)no-repeat center 3px;
+                background-size: 27px
+            }
+
+            .phone_bottom ul li:nth-child(5) {
+                background: url(../images/my_gary.png)no-repeat center 3px;
+                background-size: 27px
+            }
+
+            .phone_bottom ul li.xin:nth-child(1) {
+                background: url(../images/index_lh.png)no-repeat center 3px;
+                background-size: 27px
+            }
+
+            .phone_bottom ul li.xin:nth-child(2) {
+                background: url(../images/class_lh.png)no-repeat center 3px;
+                background-size: 27px
+            }
+
+            .phone_bottom ul li.xin:nth-child(3) {
+                background: url(../images/zhibo_lh.png)no-repeat center 3px;
+                background-size: 27px
+            }
+
+            .phone_bottom ul li.xin:nth-child(4) {
+                background: url(../images/art_lh.png)no-repeat center 3px;
+                background-size: 27px
+            }
+
+            .phone_bottom ul li.xin:nth-child(5) {
+                background: url(../images/my_lh.png)no-repeat center 3px;
+                background-size: 27px
+            }
+
+            .phone_bottom ul li a {
+                display: block;
+            }
+
+            .phone_bottom ul li dd {
+                font-size: 11px;
+                color: #666;
+                display: block;
+                margin-top: 32px;
+            }
+
+    .top_mobile {
+        width: 100%;
+        background: #fff;
+        position: fixed;
+        top: 0;
+        z-index: 96;
+        height: 50px;
+        background: #fff;
+    }
+
+    .top_img {
+        width: 180px;
+        overflow: hidden;
+        margin-top: 5px;
+        float: left;
+    }
+
+        .top_img img {
+            display: block;
+            width: 110px;
+        }
+
+        .top_img a {
+            float: right;
+            width: 150px;
+            text-align: center;
+            line-height: 24px;
+            margin-top: 20px;
+            display: block;
+            color: #2162ae;
+        }
+
+    .navv {
+        width: 30px;
+        position: absolute;
+        right: 5%;
+        top: 7px;
+    }
+
+        .navv span {
+            display: block;
+            background: #0052c2;
+            height: 2px;
+            width: 100%;
+            margin: 6px auto;
+            text-align: center;
+        }
+
+            .navv span:nth-child(2) {
+                width: 68%;
+            }
+
+            .navv span:nth-child(3) {
+                width: 68%;
+            }
+
+    .top_nav {
+        width: 100%;
+        overflow: hidden;
+        background: rgba(255,255,255,0.9);
+        display: none;
+        position: absolute;
+        z-index: 11;
+        margin-top: 52px
+    }
+
+        .top_nav ul li {
+            border-bottom: 1px solid #fff;
+            text-align: center;
+            overflow: hidden;
+            background: rgba(0,82,194,0.9);
+        }
+
+            .top_nav ul li:last-child {
+                border-bottom: none;
+            }
+
+            .top_nav ul li a {
+                font-size: 15px;
+                color: #fff;
+                padding: 3% 0%;
+                display: block;
+            }
+
+    .kong {
+        width: 100%;
+        height: 75px;
+    }
+
+    .qishiwu {
+        width: 100%;
+        height: 55px;
+        overflow: hidden
+    }
+
+    .course_class {
+        display: none;
+    }
+
+    .fla {
+        width: 100%;
+        margin: 10px auto 5px;
+        overflow: hidden;
+        border-bottom: 1px #efefef solid;
+        padding-bottom: 10px
+    }
+
+        .fla ul li {
+            float: left;
+            width: 20%;
+            overflow: hidden;
+            text-align: center;
+        }
+
+            .fla ul li a {
+                display: block;
+                color: #555;
+                font-size: 15px;
+                line-height: 22px;
+            }
+
+            .fla ul li.xo a {
+                font-weight: bold;
+                color: #000;
+                font-size: 16px
+            }
+
+    .scroll4::-webkit-scrollbar {
+        display: none
+    }
+    /*隐藏滚动条*/
+    .scroll4 {
+        width: 100%;
+        overflow-x: scroll;
+        display: -webkit-box;
+        display: flex;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        padding: 5px 0 10px;
+    }
+
+        .scroll4 li {
+            min-width: 19%;
+            margin: 0 1% 0 2%;
+            float: left;
+            overflow: hidden;
+            text-align: center;
+            -webkit-flex: 1 0 auto;
+            flex: 1 0 auto;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+            padding: 7px 7px;
+            border-radius: 10px;
+            background: #fff;
+        }
+
+            .scroll4 li a {
+                display: block;
+                color: #555;
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            .scroll4 li.xo {
+                background: #0052c2;
+            }
+
+                .scroll4 li.xo a {
+                    color: #fff
+                }
+
+    .fedent {
+        width: 100%;
+        margin: 3px auto;
+        overflow: hidden;
+        border-bottom: 1px #efefef solid;
+        padding-bottom: 3px
+    }
+
+    .goback {
+        width: 94%;
+        margin: 0px auto;
+        overflow: hidden;
+        background: #0052c2;
+        padding: 8px 3%;
+    }
+
+        .goback a {
+            display: block;
+            font-size: 15px;
+            color: #fff;
+            width: 30px
+        }
+
+        .goback > a > img {
+            display: block;
+            width: 24px;
+        }
+
+
+    /*-------------会员套餐--------------*/
+    .gvp {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .zhonglei {
+        width: 100%;
+        margin: 2vh auto 0px;
+        overflow: hidden;
+    }
+
+        .zhonglei ul li {
+            width: 25%;
+            text-align: center;
+            float: left;
+            overflow: hidden;
+            background: #aaa;
+            border-radius: 15px 15px 0 0;
+        }
+
+            .zhonglei ul li.xo {
+                background: #0052c2;
+            }
+
+                .zhonglei ul li.xo dd {
+                    font-weight: bold;
+                }
+
+            .zhonglei ul li:hover {
+                background: #0052c2;
+            }
+
+                .zhonglei ul li:hover dd {
+                    font-weight: bold;
+                }
+
+            .zhonglei ul li a {
+                display: block;
+            }
+
+            .zhonglei ul li dd {
+                display: block;
+                line-height: 40px;
+                color: #fff;
+                font-size: 15px;
+            }
+
+    .jiawei {
+        width: 96%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 2% 2%;
+    }
+
+        .jiawei ul li {
+            width: calc(48% - 4px);
+            text-align: center;
+            float: left;
+            overflow: hidden;
+            background: #fff;
+            border-radius: 8px;
+            margin: 1% 1%;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+            border: 2px #fff solid;
+        }
+
+            .jiawei ul li:nth-of-type(even) {
+                margin-right: 0;
+            }
+
+            .jiawei ul li span {
+                font-size: 16px;
+                color: #111;
+                display: block;
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+
+            .jiawei ul li a {
+                display: block;
+                cursor: pointer;
+                padding: 18px 0;
+            }
+
+            .jiawei ul li dd {
+                font-size: 20px;
+                color: #FE5200;
+                display: inline-block;
+                font-weight: bold;
+            }
+
+                .jiawei ul li dd p {
+                    font-size: 14px;
+                    color: #FE5200;
+                    display: inline-block;
+                    margin-right: 2px;
+                    margin-bottom: 5px;
+                }
+
+            .jiawei ul li.wc {
+                border: 2px #FE5200 solid;
+                background: #fff url(../images/checked-icon.png) no-repeat right bottom;
+                box-shadow: 0 0 6px 0 rgb(255 82 0 / 60%)
+            }
+
+            .jiawei ul li:hover {
+                box-shadow: 0 0 6px 0 rgb(255 82 0 / 60%)
+            }
+
+    .miaoshu {
+        width: 94%;
+        margin: 0vh auto 2vh;
+        overflow: hidden;
+        padding: 15px 0;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    }
+
+    .ms {
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+        font-size: 15px;
+        color: #111;
+        line-height: 2em;
+    }
+
+        .ms img {
+            width: 100%;
+        }
+
+    .phone_kong {
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+    }
+
+    .likemashang {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        z-index: 81;
+        background: #fff;
+        box-shadow: 0 -3px 8px rgba(0,0,0,0.08);
+        height: 50px;
+        padding: 0px 0;
+    }
+
+        .likemashang span {
+            font-size: 15px;
+            color: #FE5200;
+            display: block;
+            float: left;
+            line-height: 50px;
+            margin-left: 4%;
+        }
+
+        .likemashang a {
+            width: 35%;
+            float: right;
+            overflow: hidden;
+            text-align: center;
+            display: block;
+            font-size: 15px;
+            color: #fff;
+            background: red;
+            line-height: 50px;
+        }
+
+    .sj_pay, .inside {
+        display: none;
+    }
+
+
+    .shangke {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+        .shangke img {
+            display: block;
+            width: 100%;
+        }
+
+    .mainPlay-dimensions {
+        width: 100vw;
+        height: 220px;
+    }
+
+    .video-js {
+        width: 100vw;
+        height: 220px;
+    }
+
+    .jiangketop {
+        width: 100%;
+        overflow: hidden;
+        padding: 20px 10px 0;
+        width: calc(100% - 20px);
+    }
+
+        .jiangketop span {
+            font-size: 18px;
+            color: #111;
+            display: block;
+            font-weight: bold;
+        }
+
+        .jiangketop dd {
+            font-size: 15px;
+            color: #0052c2;
+            display: block;
+            line-height: 3em;
+        }
+
+        .jiangketop dt {
+            font-size: 13px;
+            color: #333;
+            display: block;
+        }
+
+    .class_thr {
+        width: calc(100% - 20px);
+        margin: 0 auto 20px;
+        overflow: hidden;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+        border-radius: 5px;
+        padding: 20px 10px;
+    }
+
+    .class_thr3 {
+        width: 100%;
+        margin: 0 auto 20px;
+        overflow: hidden;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+        border-radius: 5px;
+        padding: 20px 0;
+    }
+
+    .class_thr_tit {
+        width: 100%;
+        margin: 0 auto 15px;
+        overflow: hidden;
+        border-bottom: 1px #dedede solid;
+    }
+
+        .class_thr_tit ul li {
+            float: left;
+            width: 33.3%;
+            text-align: center;
+            overflow: hidden;
+        }
+
+            .class_thr_tit ul li a {
+                display: block;
+                line-height: 48px;
+                font-size: 16px;
+                color: #000;
+                border-bottom: 3px #fff solid;
+            }
+
+            .class_thr_tit ul li.pr a {
+                border-bottom: 5px #0052c2 solid;
+                font-weight: bold;
+                color: #0052c2;
+            }
+
+            .class_thr_tit ul li:hover a {
+                border-bottom: 5px #0052c2 solid;
+                font-weight: bold;
+                color: #0052c2;
+            }
+
+    .mulu {
+        width: 100%;
+        margin: 0 auto 10px;
+        overflow: hidden;
+    }
+
+        .mulu ul li {
+            width: 100%;
+            overflow: hidden;
+        }
+
+            .mulu ul li span {
+                font-size: 16px;
+                color: #000;
+                line-height: 56px;
+                background: #f6f6f6 url(../images/landi.png)no-repeat left center;
+                display: block;
+                padding-left: 25px
+            }
+
+    .yike {
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+        border-bottom: 1px #f1f2f3 solid;
+    }
+
+        .yike dd {
+            font-size: 15px;
+            color: #444;
+            line-height: 56px;
+            width: 50px;
+            float: left;
+        }
+
+        .yike dt {
+            font-size: 15px;
+            color: #444;
+            line-height: 56px;
+            width: calc(100% - 130px);
+            float: left;
+            background: url(../images/bofang.png)no-repeat left center;
+            background-size: 20px;
+            padding-left: 30px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .yike p {
+            font-size: 15px;
+            color: #444;
+            line-height: 56px;
+            width: 50px;
+            float: right;
+            text-align: right;
+        }
+
+    .qm {
+        background-size: 18px;
+    }
+
+        .qm dd {
+            color: #0052c2;
+        }
+
+        .qm dt {
+            color: #0052c2;
+        }
+
+        .qm p {
+            color: #0052c2;
+        }
+
+    .zhibo_live {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .zhibo_live_main {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /*.zhibo {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+    }
+
+        .zhibo > img {
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            min-height: 180px;
+        }*/
+
+    /*.zhibo_main {
+        width: 90%;
+        margin: 40px auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+        .zhibo_main img {
+            width: 130px;
+            float: left;
+            overflow: hidden;
+        }
+
+    .zhibo_right {
+        width: calc(100% - 150px);
+        float: right;
+        overflow: hidden;
+    }
+
+        .zhibo_right span {
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            line-height: 1.2em;
+        }
+
+        .zhibo_right dd {
+            display: none;
+        }
+
+        .zhibo_right dt {
+            font-size: 13px;
+            color: #fff;
+            display: block;
+            line-height: 2em;
+            background: #0052c2;
+            width: 90px;
+            border-radius: 50px;
+            text-align: center;
+            margin-top: 10px;
+        }*/
+
+    .zhibo_main2 {
+        width: 100%;
+        margin: 0px auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+        .zhibo_main2 > img {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            height: 30vh;
+        }
+
+    .chattingroom {
+        width: 100%;
+        border: 0px #dedede solid;
+        overflow: hidden;
+    }
+
+    .yeq {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 auto;
+        border-bottom: 1px #dedede solid;
+    }
+
+        .yeq ul li {
+            width: 30%;
+            float: left;
+            text-align: center;
+            margin: 0 10%;
+        }
+
+            .yeq ul li a {
+                display: block;
+                font-size: 15px;
+                line-height: 44px;
+                color: #111;
+            }
+
+            .yeq ul li.pz a {
+                border-bottom: 3px #0052c2 solid;
+            }
+
+    .galiao {
+        width: 100%;
+        overflow: auto;
+        height: calc(70vh - 137px);
+        margin: 0 auto;
+    }
+
+        .galiao::-webkit-scrollbar { /*滚动条整体样式*/
+            width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+            height: 4px;
+        }
+
+        .galiao::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+            border-radius: 30px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            background: #0052c2;
+        }
+
+        .galiao::-webkit-scrollbar-track { /*滚动条里面轨道*/
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            border-radius: 0;
+            background: rgba(0,0,0,0.1);
+        }
+
+
+    .mouxin {
+        width: 90%;
+        margin: 15px auto;
+        overflow: hidden;
+    }
+
+    .chat_up {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .chat_up img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50px;
+            display: block;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .chat_up dd {
+            font-size: 14px;
+            color: #111;
+            display: inline-block;
+            float: left;
+            margin-right: 15px;
+            line-height: 42px;
+        }
+
+        .chat_up dt {
+            font-size: 12px;
+            color: #666;
+            display: inline-block;
+            float: left;
+            line-height: 42px;
+        }
+
+    .chat_content {
+        display: inline-block;
+        position: relative;
+        background-color: #f1f2f3;
+        border-radius: 5px;
+        padding: 8px 12px;
+        margin-top: 10px;
+    }
+
+    .triangle {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 6px solid #f1f2f3;
+        position: absolute;
+        left: 15px;
+        top: -6px;
+    }
+
+    .real_content {
+        font-size: 13px;
+        color: #000;
+        display: block;
+        line-height: 1.7em;
+    }
+
+
+    .fabiao {
+        width: 100%;
+        height: 50px;
+        position: fixed;
+        border-top: 1px #dedede solid;
+        background: #fff;
+        bottom: 0;
+    }
+
+        .fabiao textarea {
+            width: calc(100% - 120px);
+            resize: none;
+            outline: none;
+            border: none;
+            height: 28px;
+            padding: 11px 15px;
+            line-height: 28px;
+            display: block;
+        }
+
+        .fabiao input {
+            width: calc(100% - 140px);
+            resize: none;
+            outline: none;
+            border: none;
+            height: 28px;
+            padding: 11px 15px;
+            line-height: 28px;
+            display: block;
+            font-size: 15px;
+        }
+
+        .fabiao button {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            background: #0052c2;
+            color: #fff;
+            font-size: 14px;
+            padding: 5px 0;
+            width: 100px;
+            border: none;
+            cursor: pointer;
+        }
+
+    .qitazhibo_main {
+        width: 90%;
+        margin: 0px auto;
+        overflow: hidden;
+    }
+
+        .qitazhibo_main h5 {
+            font-size: 28px;
+            color: #222;
+            display: block;
+            line-height: 36px;
+            margin-bottom: 30px;
+            font-weight: normal;
+            margin-left: 10px;
+        }
+
+        .qitazhibo_main ul li {
+            width: 279px;
+            float: left;
+            overflow: hidden;
+            margin: 0 28px 25px 0;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+            background: #fff;
+            border-radius: 5px;
+        }
+
+            .qitazhibo_main ul li:nth-child(5n) {
+                margin-right: 0;
+            }
+
+            .qitazhibo_main ul li a {
+                display: block;
+                cursor: pointer;
+            }
+
+                .qitazhibo_main ul li a img {
+                    width: 100%;
+                    display: block;
+                }
+
+    .livePlayer {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        height: 35vh;
+    }
+
+    .index_xcpx {
+        display:none;
+    }
+    .index_xcpx_class {
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+        overflow: hidden;
+    }
+
+    .index-live_main {
+        display: none;
+    }
+
+    .scroll2::-webkit-scrollbar {
+        display: none
+    }
+    /*隐藏滚动条*/
+    .scroll2 {
+        display:block;
+        width: 98%;
+        margin: 0 1% 0;
+        overflow-x: scroll;
+        display: -webkit-box;
+        display: flex;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+    }
+
+        .scroll2 li {
+            width: 42%;
+            margin: 0 2%;
+            float: left;
+            overflow: hidden;
+            text-align: center;
+            -webkit-flex: 1 0 auto;
+            flex: 1 0 auto;
+        }
+
+            .scroll2 li a {
+                display: block;
+                font-size: 14px;
+                color: #888;
+            }
+
+                .scroll2 li a > img {
+                    width: 100%;
+                    height: 86px;
+                    display: block;
+                }
+}

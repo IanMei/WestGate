@@ -1,0 +1,22 @@
+﻿@model IList<CMS.IService.FrontEnd.Article.Dto.FrontArticleItem>
+<div class="hotpoint">
+    <span>热点内容</span>
+    @foreach (var item in Model)
+    {
+        if (Model.IndexOf(item) == 0)
+        {
+            <a href="/Article/Content/@Html.Encode(item.id)" class="withpicture">
+                <img src="@Html.Encode(item.image)" />
+            </a>
+        }
+        else
+        {
+            <a href="/Article/Content/@Html.Encode(item.id)" class="wx">
+                <dl>
+                    <dd>@Html.Encode(item.title)</dd>
+                    <dt>@Html.Encode(item.datepublish)</dt>
+                </dl>
+            </a>
+        }
+    }
+</div>

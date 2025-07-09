@@ -1,0 +1,73 @@
+﻿@model IList<CMS.IService.FrontEnd.Common.Dto.SwiperDto>
+<div class="clearfloat">
+    <div id='slider' class='swipe'>
+        <div class='swipe-wrap'>
+            @foreach (var item in Model)
+            {
+                <div class='wrap'>
+                    @if (item.url.Length > 0)
+                    {
+                        <a title="@Html.Encode(item.title)" target="_self" href="@Html.Encode(item.url)">
+                            <img style="width:100%;min-height:125px;" alt="@Html.Encode(item.title)" src="@Html.Encode(item.image)">
+                        </a>
+                    }
+                    else
+                    {
+                        <img style="width:100%;min-height:125px;" alt="@Html.Encode(item.title)" src="@Html.Encode(item.image)">
+                    }
+                </div>
+            }
+        </div>
+        <ol>
+            @foreach (var item in Model)
+            {
+                if (Model.IndexOf(item) == 0)
+                {
+                    <li class="on"></li>
+                }
+                else
+                {
+                    <li></li>
+                }
+            }
+        </ol>
+    </div>
+    <div id="banner_tabs" class="flexslider">
+        <ul class="slides">
+            @foreach (var item in Model)
+            {
+                <li>
+                    @if (item.url.Length > 0)
+                    {
+                        <a title="@Html.Encode(item.title)" target="_self" href="@Html.Encode(item.url)">
+                            <img alt="@Html.Encode(item.title)" style="background: url(@Html.Encode(item.image)) no-repeat center;" src="/Content/images/alpha.png">
+                        </a>
+                    }
+                    else
+                    {
+                        <a title="@Html.Encode(item.title)" target="_self" href="javascript:void(0);">
+                            <img alt="@Html.Encode(item.title)" style="background: url(@Html.Encode(item.image)) no-repeat center;" src="/Content/images/alpha.png">
+                        </a>
+                    }
+                </li>
+            }
+        </ul>
+        <ul class="flex-direction-nav">
+            <li><a class="flex-prev" style="z-index: 999;" href="javascript:void(0);">Previous</a></li>
+            <li><a class="flex-next" style="z-index: 999;" href="javascript:void(0);">Next</a></li>
+        </ul>
+        <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+            @foreach (var item in Model)
+            {
+                if (Model.IndexOf(item) == 0)
+                {
+                    <li class="active"><a href="javascript:void(0);"></a></li>
+                }
+                else
+                {
+                    <li><a href="javascript:void(0);"></a></li>
+                }
+            }
+        </ol>
+    </div>
+</div>

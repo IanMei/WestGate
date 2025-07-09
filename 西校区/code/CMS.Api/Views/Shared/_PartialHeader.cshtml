@@ -1,0 +1,115 @@
+﻿@model CMS.IService.FrontEnd.Common.Dto.HeaderInfo
+<div id="header" class="top">
+    <div class="crumbs">
+        <div class="crumbs_main">
+            <div class="crumbs_main_fl">欢迎来到<a href="/Home/Index">工控平台</a></div>
+            <div class="crumbs_main_fr">咨询热线：@Html.Encode(Model.serviceTel)</div>
+        </div>
+    </div>
+    <div class="top_main">
+        <div class="top_logo">
+            <a href="/Home/Index">
+                <img src="@Html.Encode(Model.Logo)" />
+            </a>
+        </div>
+        <div class="top_nav">
+            <ul>
+                <li class='@(Model.tab == 0 ? "on":"")'><a href="/Home/Index">首页</a></li>
+                <li class='@(Model.tab == 1 ? "on":"")'><a href="/Course/Index">课程中心</a></li>
+                <li class='@(Model.tab == 2 ? "on":"")'><a href="/Train/Index">现场培训</a></li>
+                <li class='@(Model.tab == 3 ? "on":"")'><a href="/Live/Index">直播课堂</a></li>
+                <li class='@(Model.tab == 4 ? "on":"")'><a href="/Download/Index">下载中心</a></li>
+                <li class='@(Model.tab == 5 ? "on":"")'><a href="/Article/Index">新闻动态</a></li>
+            </ul>
+        </div>
+        <div class="top_login">
+            @if (Model.login != null)
+            {
+                <el-dropdown size="small" class="wdf" trigger="click">
+                    <span>
+                        <img src="@Html.Encode(Model.login.Avatar)" />
+                        <dd>@Html.Encode(Model.login.NickName)</dd>
+                    </span>
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item v-on:click.native="changePw">
+                            <i name="key" class="el-icon-user"></i>
+                            个人中心
+                        </el-dropdown-item>
+                        <el-dropdown-item v-on:click.native="logOff">
+                            <i name="power-off" class="el-icon-refresh-left"></i>
+                            注销
+                        </el-dropdown-item>
+                    </el-dropdown-menu>
+                </el-dropdown>
+            }
+            else
+            {
+                <ul>
+                    <li><a href="/Account/Login">登录</a></li>
+                    <li><span>|</span></li>
+                    <li><a href="/Account/Enroll">注册</a></li>
+                </ul>
+            }
+        </div>
+        <div class="top_search">
+            <form action="/Home/Search" target="_blank">
+                <input id="key" name="key" type="search" maxlength="20" placeholder="课程/关键词">
+                <button type="submit">
+                    <i class="el-icon-search"></i>
+                    搜索
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="top_mobile">
+    <div class="top_img"><img src="@Url.Content("~/Content/images/logo_color.png")" /></div>
+    <div class="navv" v-on:click="showMenu = !showMenu"><span></span><span></span><span></span><span></span></div>
+    <div class="top_nav" v-show="showMenu">
+        <ul>
+            <li><a href="/home/index">首页</a></li>
+            <li><a href="/course/index">课程中心</a></li>
+            <li><a href="/train/index">现场培训</a></li>
+            <li><a href="/live/index">直播课堂</a></li>
+            <li><a href="/download/index">下载中心</a></li>
+            <li><a href="/article/index">文章</a></li>
+        </ul>
+    </div>
+</div>
+<div class="qishiwu" title="wap"></div>
+<script>
+    new Vue({
+        el: "#header",
+        data: {
+            showMenu: false
+        },
+        methods: {
+            changePw: function () {
+                const that = this
+                window.location.href = '/Account/Index'
+            },
+            logOff: function () {
+                const that = this
+                that.$confirm('此操作将登出账号, 是否继续?', '提示', {
+                    confirmButtonText: '确定',
+                    cancelButtonText: '取消',
+                    type: 'warning'
+                }).then(() => {
+                    window.location.href = '/account/logout'
+                }).catch(() => {
+
+                });
+            }
+        }
+    })
+
+    function wordSearch() {
+        window.location.href = '/Home/Search?key=' + escape($("#key").val())
+    }
+
+    $(document).ready(function () {
+        $("div.navv").click(function () {
+            $("div.top_nav").toggle();
+        })
+    });
+</script>

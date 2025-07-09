@@ -1,0 +1,137 @@
+﻿@model IList<CMS.IService.FrontEnd.Common.Dto.CourseLiveDto>
+<div id="appHotLive" class="index-live">
+    <div class="index_live_tit">
+        <span>直播课程</span>
+        <a href="/Live/index" class="more">更多</a>
+    </div>
+    <div class="index-live_main">
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <a href="/Live/Content/@Html.Encode(item.courseId)">
+                            <img src="@Html.Encode(item.courseLogo)" />
+                        </a>
+                        <div class="live_words">
+                            <a href="/Live/Content/@Html.Encode(item.courseId)">
+                                <span>@Html.Encode(item.courseName)</span>
+                            </a>
+                            @if (item.state == "active")
+                            {
+                                <p style="color:orangered;font-weight:bold;">@Html.Encode(item.datePlay)</p>
+                            }
+                            else
+                            {
+                                <p>@Html.Encode(item.datePlay)</p>
+                            }
+                            @foreach (var row in item.teachers)
+                            {
+                                <div class="zj2">
+                                    <img src="@Html.Encode(row.teacherLogo)" />
+                                    <dt>@Html.Encode(row.teacherName)</dt>
+                                </div>
+                            }
+                            @if (item.state == "active")
+                            {
+
+                            }
+                            else
+                            {
+                                <div class="live_words_button" @@click="doClassReminder(@Html.Encode(item.courseId))">开课提醒</div>
+                            }
+                        </div>
+                        <div class="zhujiang">
+                            @foreach (var row in item.teachers)
+                            {
+                                <img src="@Html.Encode(row.teacherLogo)" />
+                                <dd>讲师：@Html.Encode(row.teacherName)</dd>
+                            }
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+    <ul class="scroll2">
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="/Live/Content/@Html.Encode(item.courseId)">
+                    <img src="@Html.Encode(item.courseLogo)" />
+                </a>
+                <div class="live_words" style="width:100%;margin: 0 auto;text-align:left;">
+                    <span style="line-height:2em;">@Html.Encode(item.courseName)</span>
+                    <p style="margin-bottom:5px;">@Html.Encode(item.datePlay)</p>
+                </div>
+            </li>
+        }
+    </ul>
+</div>
+<script>
+    new Vue({
+        el: "#appHotLive",
+        data() {
+            return {
+
+            }
+        },
+        created() {
+            const that = this
+        },
+        mounted() {
+            const that = this
+        },
+        methods: {
+            doClassReminder: function (id) {
+                const that = this
+                that.$nextTick(() => {
+                    api.get('/api/FrontEnd/FrontLive/GetLiveReminder', {
+                        params: {
+                            id: id
+                        }
+                    }).then(function (res) {
+                        console.log(res)
+                        if (res.code == 200) {
+                            console.log(res.data)
+                            that.$message({
+                                message: '预约成功',
+                                type: 'success'
+                            })
+                            //setTimeout(function () {
+                            //    window.location.href = '/Live/Content/' + id
+                            //}, 1000)
+                        }
+                        else if (res.code == 1) {
+                            that.$message({
+                                message: res.message,
+                                type: 'success'
+                            })
+                            //setTimeout(function () {
+                            //    window.location.href = '/Live/Content/' + id
+                            //}, 500)
+                        }
+                        else if (res.code == 401) {
+                            that.$message({
+                                message: res.message,
+                                type: 'error'
+                            })
+                            setTimeout(function () {
+                                window.location.href = "/Account/Login?returnUrl=" + escape(window.location.href)
+                            }, 500)
+                        }
+                        else {
+                            that.$message({
+                                message: res.message,
+                                type: 'error'
+                            })
+                        }
+                    }).catch(function (err) {
+                        console.log(err)
+                    })
+                })
+            },
+        },
+        computed: {
+
+        }
+    })
+</script>

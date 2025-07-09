@@ -1,0 +1,18 @@
+﻿@model IList<CMS.IService.FrontEnd.Common.Dto.LinkDto>
+<div class="partlogo">
+    <div class="hy_tit">
+        <span>合作机构</span>
+    </div>
+    <div class="partlogo_main">
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    <a href="@Html.Encode(item.url)" target="_blank" title="@Html.Encode(item.name)">
+                        <img src="@Html.Encode(item.logo)" />
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

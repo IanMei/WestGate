@@ -1,0 +1,7 @@
+﻿@model IList<CMS.IService.FrontEnd.Common.Dto.SwiperDto>
+<div class="banner">
+    @foreach (var item in Model)
+    {
+        <img alt="@Html.Encode(item.title)" src="@Html.Encode(item.image)">
+    }
+</div>

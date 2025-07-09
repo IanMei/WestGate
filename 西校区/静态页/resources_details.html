@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>EIE League</title>
+<meta name="keywords" content="EIE League">
+<meta name="description" content="EIE League">
+
+
+<link type="text/css"  rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css">
+
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+
+
+<script type="text/javascript" src="js/MSClass.js"></script>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/swipe.js"></script>
+<script src="js/jquery-1.8.2.min.js"></script>
+
+<link type="text/css"  rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/lanrenzhijia.js"></script>
+
+<script type="text/javascript" src="js/uaredirect.js"></script>
+<script type="text/javascript">uaredirect("http://");</script>
+
+<script src="js/menu.js" type="text/javascript"></script>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/slider.js"></script>
+<script type="text/javascript">
+		$(function () {
+			var bannerSlider = new Slider($('#banner_tabs'), {
+				time: 5000,
+				delay: 400,
+				event: 'hover',
+				auto: true,
+				mode: 'fade',
+				controller: $('#bannerCtrl'),
+				activeControllerCls: 'active'
+			});
+			$('#banner_tabs .flex-prev').click(function () {
+				bannerSlider.prev()
+			});
+			$('#banner_tabs .flex-next').click(function () {
+				bannerSlider.next()
+			});
+			var pageWidth = $(".flexslider").width();
+			/*var pageHeight = pageWidth / 16 * 9 ;*/
+			$(".flexslider").height(400);
+      $(".flexslider .slides a img").height(400);//$(window).height()
+  })
+</script>
+
+<script type="text/javascript">
+		var pageindex = $("#PAGEINDEX").val();
+		$(".menu li:eq("+pageindex+")").addClass("active home");
+</script>
+
+</head>
+<body>
+
+
+<div class="top">
+		<div class="top_2">
+				<div class="top_main">
+						<div class="top_logo">
+								<a href="pingshen.html"><img src="images/logo.png"/></a>
+						</div>
+						<div class="top_nav">
+								<ul>
+										<li><a href="index.html">主页</a></li>
+										<li><a href="membership.html">会员名录</a></li>
+										<li class="on"><a href="resources.html">资源互通</a></li>
+										<li><a href="announcement.html">活动公告</a></li>
+										<li><a href="about.html">关于我们</a></li>
+										<li><a href="register.html">用户登录</a></li>
+								</ul>
+						</div>
+						<div class="top_login">
+								<span>语言</span>
+								<div class="flag"><img src="images/e.png" /></div>
+								<select>
+										<option><dd>中文CN</dd></option>
+										<option><dd>中文CN</dd></option>
+										<option><dd>中文CN</dd></option>
+								</select>
+						</div>
+				</div>
+		</div>
+</div>
+
+
+
+
+
+<div class="resources_top">
+		<div class="resources_top_main">
+				<div class="rr_mid">
+						<h5>Antonio Young</h5>
+						<dd>主修学历：MBA/语言</dd>
+						<dd>最高学历：硕士</dd>
+						<a href="javascript:;" class="tanchu">立刻联系</a>
+				</div>
+				<img src="images/renxiang.jpg"/>
+		</div>
+</div>
+
+
+
+<div class="huidi">
+  	<div class="huidi_main">
+				<div class="dingwei">
+						<div class="huidi_left">
+								<span>Antonio Young</span>
+								<div class="contact"><dd>TEL</dd><dt>+86 139 8765 4321</dt></div>
+								<div class="contact"><dd>MAIL</dd><dt>qwer@eieleague.com</dt></div>
+						</div>
+						<img src="images/renxiang.jpg"/>
+				</div>
+				<a href="">点击空白处返回</a>
+		</div>	
+</div>
+<script type="text/javascript">
+ $(document).ready(function () {
+ $(".tanchu").click(function () {
+         $(".huidi").fadeIn();
+     })
+
+     $("#clo").click(function () {
+         $(".huidi").fadeOut();
+     });
+ })
+</script>
+
+
+
+
+<div class="schol">
+		<div class="schol_main">
+				<span>基本信息</span>
+				<ul>
+						<li>
+								<img src="images/guoji.png"/>
+								<div class="xx_sli">
+										<p>国籍</p>
+										<div class="xx_sli_next"><dd>美利坚合众国&nbsp;/&nbsp;U.S.A.</dd></div>
+								</div>
+						</li>
+						<li>
+								<img src="images/gongzi.png"/>
+								<div class="xx_sli">
+										<p>薪资</p>
+										<div class="xx_sli_next"><dd>20,000&nbsp;CNY&nbsp;/&nbsp;月</dd></div>
+								</div>
+						</li>
+						
+				</ul>
+		</div>
+</div>
+
+
+
+
+
+
+
+<div class="jingli">
+		<div class="jingli_main">
+				<span>教育经历</span>
+				<ul>
+						<li><dd>2021</dd><dt>Duke University Kunshan</dt><p>MBA&nbsp;硕士</p></li>
+						<li><dd>2019</dd><dt>长安大学</dt><p>电子商务&nbsp;学士</p></li>
+						<li><dd>2015</dd><dt>安丘第一高级中学</dt></li>
+				</ul>
+		</div>
+</div>
+
+
+
+
+
+<div class="jingli">
+		<div class="jingli_main">
+				<span>工作经历</span>
+				<ul>
+						<li><dd>2021</dd><dt>安徽思维田教育科技</dt><p>运营顾问</p></li>
+						<li><dd>2018</dd><dt>易骑运动苏州</dt><p>总经理&nbsp;CEO</p></li>
+						<li><dd>2015</dd><dt>太仓屋伏石</dt><p>运营总监&nbsp;COO</p></li>
+				</ul>
+		</div>
+</div>
+
+
+
+
+
+
+<div class="nengli">
+		<div class="nengli_main">
+				<span>能力自评</span>
+				<ul>
+						<li><dd>授课教学</dd><div class="longshort"><div class="shuzhi" style="width: 27%"></div></div></li>
+						<li><dd>专业知识</dd><div class="longshort"><div class="shuzhi" style="width: 41%"></div></div></li>
+						<li><dd>组织管理</dd><div class="longshort"><div class="shuzhi" style="width: 34%"></div></div></li>
+						<li><dd>执行实操</dd><div class="longshort"><div class="shuzhi" style="width: 87%"></div></div></li>
+				</ul>
+		</div>
+</div>
+
+
+
+
+
+
+
+<div class="zhengshu">
+		<div class="zhengshu_main">
+				<span>能力自评</span>
+				<ul>
+						<li><img src="images/zhengshu.png"/></li>
+						<li><img src="images/zhengshu.png"/></li>
+						<li><img src="images/zhengshu.png"/></li>
+				</ul>
+		</div>
+</div>
+
+
+
+
+
+
+
+<div class="xxzs">
+		<div class="xxzs_main">
+				<span>自我简述</span>
+				<p>那么，而这些并不是完全重要，更加重要的问题是，文章生成器的发生,到底需要如何做到，不文章生成器的发生,又会如何产生。-般来说，我们都知道， 只要有意义,那么就必须慎重考虑。从这个角度来看，文章生成器，发生了会如何，不发生又会如何。现在，解决文章生成器的问题，是非常非常重要的。<br/></p>
+
+<p>所以，每个人都不得不面对这些问题。在面对这种问题时，现在，解决文章生成器的问题，是非常非常重要的。所以，文章生成器，发生了会如何,不发生又会如何。这种事实对本人来说意义重大，相信对这个世界也是有一定意义的。这样看来，就我个人来说，文章生成器对我的意义，不能不说非常重大。现在,解决文章生成器的问题，是非常非常重要的。所以，- -般来说，在这种困难的抉择下，本人思来想去,寝食难安。- -般来说，生活中，若文章生成器出现了，我们就不得不考虑它出现了的事实。我们一般认为， 抓住了问题的关键，其他-切则会迎刃而解。本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。了 解清楚文章生成器到底是一种怎么样的存在,是解决-切问题的关键。培根曾经说过,深窥自己的心，而后发觉- -切的奇迹在你自己。<br/></p>
+		</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="foot">
+		<div class="foot_main">
+				<div class="part">
+						<span>战略合作伙伴</span>
+						<ul>
+								<li><img src="images/logo2.png"/></li>
+								<li><img src="images/logo2.png"/></li>
+								<li><img src="images/logo2.png"/></li>
+								<li><img src="images/logo2.png"/></li>
+						</ul>
+				</div>
+				<div class="huiyuan">
+						<span>优质会员</span>
+						<ul>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+								<li><a href="#"><dd>某某国际学校</dd></a></li>
+						</ul>
+				</div>
+				<div class="lx_rh">
+						<span>联系入会</span>
+						<div class="lx_left">
+								<dd>Tel：+86 51288888888</dd>
+								<dd>E-mail：qwerty@eie.com</dd>
+								<dd>Add：上海市某某路某某座某某室</dd>
+						</div>
+						<div class="lx_right">
+								<img src="images/ma.png"/>
+								<dt>微信公众号</dt>
+						</div>
+				</div>
+				<div class="beian"><a href="#">备案号：**************************</a></div>
+		</div>
+</div>
+
+
+
+
+<div class="dianzi"></div>
+<div class="phone_bottom">
+		<ul>
+				<li><a href="#"><img src="images/boa.png"/><dd>首页</dd></a></li>
+				<li><a href="#"><img src="images/boa.png"/><dd>课程</dd></a></li>
+				<li><a href="#"><img src="images/boa.png"/><dd>直播</dd></a></li>
+				<li><a href="#"><img src="images/boa.png"/><dd>文章</dd></a></li>
+				<li><a href="#"><img src="images/boa.png"/><dd>我的</dd></a></li>
+		</ul>
+</div>
+
+
+
+</body>
+</html>

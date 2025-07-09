@@ -1,0 +1,20 @@
+﻿@model IList<CMS.IService.FrontEnd.Course.Dto.FrontCourseItem>
+<div class="hot_class">
+    <span>热门课程</span>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="/Course/Details/@Html.Encode(item.courseId)">
+                    <img src="@Html.Encode(item.courseLogo)" />
+                    <div class="class-you">
+                        <dd>@Html.Encode(item.courseName)</dd>
+                        <dt>@Html.Encode(item.classhour)课时</dt>
+                        <dt>@Html.Encode(item.readTimes)人学过</dt>
+                        <p>立即去学</p>
+                    </div>
+                </a>
+            </li>
+        }
+    </ul>
+</div>

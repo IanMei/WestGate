@@ -1,0 +1,9 @@
+﻿@model IList<CMS.IService.FrontEnd.Common.Dto.SwiperDto>
+<div class="guangg">
+    @foreach (var item in Model)
+    {
+        <a href="@Html.Encode(item.url)">
+            <img src="@Html.Encode(item.image)" />
+        </a>
+    }
+</div>

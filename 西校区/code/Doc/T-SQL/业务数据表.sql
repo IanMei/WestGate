@@ -1,0 +1,328 @@
+﻿PRINT 'CREATE TABLE BASE_CLASS'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[BASE_CLASS]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[BASE_CLASS]
+GO
+
+CREATE TABLE BASE_CLASS
+(
+	CLASS_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	CLASS_NO	Nvarchar(32)		NOT NULL,
+	CLASS_NAME	Nvarchar(20)		NOT NULL,
+	IS_ENABLED	Int	Default(1)	NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_BY	Decimal(9)		NOT NULL,
+	CREATE_TIME	DateTime		NOT NULL,
+	UPDATE_BY	Decimal(9)		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+	constraint BASE_CLASS_PK PRIMARY KEY CLUSTERED (TYPE_ID)
+)
+GO
+CREATE UNIQUE INDEX BASE_CLASS_IDX01 ON BASE_CLASS (TYPE_NO)
+GO
+
+PRINT 'CREATE TABLE BASE_TYPE'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[BASE_TYPE]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[BASE_TYPE]
+GO
+
+CREATE TABLE BASE_TYPE
+(
+	TYPE_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	TYPE_NO	Nvarchar(32)		NOT NULL,
+	CLASS_NO	Nvarchar(32)		NOT NULL,
+	TYPE_NAME	Nvarchar(20)		NOT NULL,
+	IS_ENABLED	Int	Default(1)	NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_BY	Decimal(9)		NOT NULL,
+	CREATE_TIME	DateTime		NOT NULL,
+	UPDATE_BY	Decimal(9)		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+
+
+	constraint BASE_TYPE_PK PRIMARY KEY CLUSTERED (TYPE_ID)
+)
+GO
+CREATE UNIQUE INDEX BASE_TYPE_IDX01 ON BASE_TYPE (TYPE_NO)
+GO
+
+
+
+
+PRINT 'CREATE TABLE APP_ACTIVITY'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_ACTIVITY]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_ACTIVITY]
+GO
+
+CREATE TABLE APP_ACTIVITY
+(
+	ACTIVITY_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	ACTIVITY_NO	Nvarchar (20)		NOT NULL,
+	ACTIVITY_NAME	Nvarchar(20)		NOT NULL,
+	ACTIVITY_DATE	Nvarchar(20)		NULL,
+	ACTIVITY_ADDRESS	Nvarchar(50)		NULL,
+	ACTIVITY_QTY	int		NULL,
+	CONTENT	Text		NULL,
+	DATE_PUBLISH	DateTime		NOT NULL,
+	SEQ_NO	Decimal(9)		NOT NULL,
+	PICTURE_MINI	int		NULL,
+	PICTURE_NAME	Nvarchar(100)		NULL,
+	KEYLIST	Nvarchar(200)		NULL,
+	DESCRIPTION	Nvarchar(200)		NULL,
+	READ_TMES	Decimal(9)	Default(1)	NOT NULL,
+	LIKED_TMES	Decimal(9)	Default(0)	NOT NULL,
+	IS_HEAD	INT		NOT NULL,
+	IS_HOT	INT		NOT NULL,
+	IS_ENABLED	INT	Default(1)	NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_BY	Decimal(9)		NOT NULL,
+	CREATE_TIME	DateTime		NOT NULL,
+	UPDATE_BY	Decimal(9)		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+
+	constraint APP_ACTIVITY_PK PRIMARY KEY CLUSTERED (ACTIVITY_ID)
+)
+GO
+CREATE UNIQUE INDEX APP_ACTIVITY_IDX01 ON APP_ACTIVITY (ACTIVITY_NO)
+GO
+
+
+PRINT 'CREATE TABLE APP_ABOUT'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_ABOUT]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_ABOUT]
+GO
+
+CREATE TABLE APP_ABOUT
+(
+	ABOUT_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	ABOUT_NO	Nvarchar (20)		NOT NULL,
+	TYPE_NO	Nvarchar(20)		NOT NULL,
+	TITLE	Nvarchar(100)		NOT NULL,
+	DATE_PUBLISH	DateTime		NOT NULL,
+	SEQ_NO	Decimal(9)		NOT NULL,
+	SOURCE	Nvarchar(20)		NULL,
+	PICTURE_MINI	int		NULL,
+	PICTURE_NAME	Nvarchar(100)		NULL,
+	KEYLIST	Nvarchar(200)		NULL,
+	DESCRIPTION	Nvarchar(200)		NULL,
+	CONTENT	Text		NULL,
+	IS_ENABLED	INT	Default(1)	NOT NULL,
+	READ_TMES	Decimal(9)	Default(1)	NOT NULL,
+	LIKED_TMES	Decimal(9)	Default(0)	NOT NULL,
+	FILE_NO	Nvarchar(20)		NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_BY	Decimal(9)		NOT NULL,
+	CREATE_TIME	DateTime		NOT NULL,
+	UPDATE_BY	Decimal(9)		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+
+
+	constraint APP_ABOUT_PK PRIMARY KEY CLUSTERED (ABOUT_ID)
+)
+GO
+CREATE UNIQUE INDEX APP_ABOUT_IDX01 ON APP_ABOUT (ABOUT_NO)
+GO
+
+
+PRINT 'CREATE TABLE APP_HELP'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_HELP]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_HELP]
+GO
+
+CREATE TABLE APP_HELP
+(
+	HELP_ID	Decimal(9)		IDENTITY (1,1)	NOT NULL,
+	HELP_NO	Nvarchar(20)		NOT NULL,
+	TITLE	Nvarchar(100)		NOT NULL,
+	DATE_PUBLISH	DateTime		NOT NULL,
+	SEQ_NO	Decimal(9)		NOT NULL,
+	SOURCE	Nvarchar(20)		NULL,
+	PICTURE_MINI	int		NULL,
+	PICTURE_NAME	Nvarchar(100)		NULL,
+	KEYLIST	Nvarchar(200)		NULL,
+	DESCRIPTION	Nvarchar(200)		NULL,
+	CONTENT	Text		NULL,
+	READ_TMES	Decimal(9)	Default(1)	NOT NULL,
+	IS_ENABLED	Int	Default(0)	NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_TIME	DateTime		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+
+
+
+	constraint APP_HELP_PK PRIMARY KEY CLUSTERED (HELP_ID)
+)
+GO
+CREATE UNIQUE INDEX APP_HELP_IDX01 ON APP_HELP (HELP_NO)
+GO
+
+PRINT 'CREATE TABLE [APP_SCHOOL]'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_SCHOOL]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_SCHOOL]
+GO
+CREATE TABLE [dbo].[APP_SCHOOL] (
+    [SCHOOL_ID]         DECIMAL (9)    IDENTITY (1, 1) NOT NULL,
+    [SCHOOL_NO]         NVARCHAR (20)  NOT NULL,
+    [SCHOOL_NAME]       NVARCHAR (20)  NOT NULL,
+    [EN_NAME]           NVARCHAR (50)  NULL,
+    [MOBILE]            NVARCHAR (20)  NOT NULL,
+    [USER_PWD]          NVARCHAR (120) NOT NULL,
+    [REFERRER]          NVARCHAR (20)  NULL,
+    [HEAD_ID]           DECIMAL (9)    NULL,
+    [IMAGE_ID]          DECIMAL (9)    NULL,
+    [PROVINCE_NO]       NVARCHAR (6)   NULL,
+    [CITY_NO]           NVARCHAR (6)   NULL,
+    [DISYRICT_NO]       NVARCHAR (6)   NULL,
+    [ADDRESS]           NVARCHAR (200) NULL,
+    [ADDRESS_EN]        NVARCHAR (200) NULL,
+    [ESPECIALLY_COURSE] NVARCHAR (200) NULL,
+    [HOME_PAGE]         NVARCHAR (200) NULL,
+    [CONTENT]           TEXT           NULL,
+    [STU_QTY]           INT            NULL,
+    [RECRUIT_QTY]       INT            NULL,
+    [TAS_RATE]          DECIMAL (9, 2) NULL,
+    [FT_QTY]            DECIMAL (9, 2) NULL,
+    [TS_RATE]           DECIMAL (9, 2) NULL,
+    [ENROLL_RATE]       DECIMAL (9, 2) NULL,
+    [ENROLL_QTY]        INT            NULL,
+    [TUITION_CNY]       DECIMAL (9, 2) NULL,
+    [TUITION_USD]       DECIMAL (9, 2) NULL,
+    [STAY_CNY]          DECIMAL (9, 2) NULL,
+    [STAY_USD]          DECIMAL (9, 2) NULL,
+    [CLIENT_ID]         NVARCHAR (50)  NULL,
+    [POINT]             DECIMAL (9)    NULL,
+    [RECRUIT_TYPE]      NVARCHAR (20)  NULL,
+    [IS_RECOMMEND]      INT           DEFAULT ((0)) NOT NULL,
+    [IS_ENABLED]        INT           DEFAULT ((0)) NOT NULL,
+    [REMARK]            NVARCHAR (200) NULL,
+    [CREATE_TIME]       DATETIME       NOT NULL,
+    [UPDATE_TIME]       DATETIME       NOT NULL,
+    CONSTRAINT [APP_SCHOOL_PK] PRIMARY KEY CLUSTERED ([SCHOOL_ID] ASC)
+);
+
+
+GO
+CREATE UNIQUE NONCLUSTERED INDEX [APP_SCHOOL_IDX01]
+    ON [dbo].[APP_SCHOOL]([SCHOOL_NO] ASC);
+
+GO
+PRINT 'CREATE TABLE [APP_SCHOOL_FILE]'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_SCHOOL_FILE]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_SCHOOL_FILE]
+GO
+CREATE TABLE [dbo].[APP_SCHOOL_FILE] (
+    [FILE_ID]     DECIMAL (9)    IDENTITY (1, 1) NOT NULL,
+    [FILE_TYPE]   NVARCHAR (20)  NOT NULL,
+    [SCHOOL_NO]   NVARCHAR (20)  NOT NULL,
+    [TITLE]       NVARCHAR (20)  NOT NULL,
+    [IMAGE_ID]    DECIMAL (9)    NULL,
+    [VIDEO_URL]   NVARCHAR (200) NULL,
+    [REMARK]      NVARCHAR (200) NULL,
+    [CREATE_TIME] DATETIME       NOT NULL,
+    [UPDATE_TIME] DATETIME       NOT NULL,
+    CONSTRAINT [AAPP_SCHOOL_FILE_PK] PRIMARY KEY CLUSTERED ([FILE_ID] ASC)
+);
+
+GO
+PRINT 'CREATE TABLE [APP_FACILITIES]'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_FACILITIES]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_FACILITIES]
+GO
+CREATE TABLE [dbo].[APP_FACILITIES] (
+    [FACILITIES_ID]   DECIMAL (9)    IDENTITY (1, 1) NOT NULL,
+    [FACILITIES_TYPE] NVARCHAR (20)  NOT NULL,
+    [SCHOOL_NO]       NVARCHAR (20)  NOT NULL,
+    [TITLE]           NVARCHAR (20)  NOT NULL,
+    [IS_ENABLED]      INT            DEFAULT ((0)) NOT NULL,
+    [REMARK]          NVARCHAR (200) NULL,
+    [CREATE_TIME]     DATETIME       NOT NULL,
+    [UPDATE_TIME]     DATETIME       NOT NULL,
+    CONSTRAINT [APP_FACILITIES_PK] PRIMARY KEY CLUSTERED ([FACILITIES_ID] ASC)
+);
+
+
+GO
+PRINT 'CREATE TABLE [APP_HONOR]'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_HONOR]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_HONOR]
+GO
+CREATE TABLE [dbo].[APP_HONOR] (
+    [HONOR_ID]    DECIMAL (9)    IDENTITY (1, 1) NOT NULL,
+    [SCHOOL_NO]   NVARCHAR (20)  NOT NULL,
+    [HONOR_YEAR]  NVARCHAR (20)  NOT NULL,
+    [HONOR_DESC]  NVARCHAR (200) NOT NULL,
+    [REMARK]      NVARCHAR (200) NULL,
+    [CREATE_TIME] DATETIME       NOT NULL,
+    [UPDATE_TIME] DATETIME       NOT NULL,
+    CONSTRAINT [APP_HONOR_PK] PRIMARY KEY CLUSTERED ([HONOR_ID] ASC)
+);
+
+
+
+PRINT 'CREATE TABLE APP_INTERVIEW'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_INTERVIEW]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_INTERVIEW]
+GO
+
+CREATE TABLE APP_INTERVIEW
+(
+	INTERVIEW_ID	Decimal(9) IDENTITY (1,1)		NOT NULL,
+	SCHOOL_NO	Nvarchar(20)		NOT NULL,
+	TITLE	Nvarchar(100)		NOT NULL,
+	DATE_PUBLISH	DateTime		NOT NULL,
+	SEQ_NO	Decimal(9)		NOT NULL,
+	SOURCE	Nvarchar(20)		NULL,
+	PICTURE_MINI	int		NULL,
+	PICTURE_NAME	Nvarchar(100)		NULL,
+	KEYLIST	Nvarchar(200)		NULL,
+	DESCRIPTION	Nvarchar(200)		NULL,
+	CONTENT	Text		NULL,
+	READ_TMES	Decimal(9)	Default(1)	NOT NULL,
+	IS_ENABLED	Int	Default(0)	NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_TIME	DateTime		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+
+
+
+	constraint APP_INTERVIEW_PK PRIMARY KEY CLUSTERED (HELP_ID)
+)
+GO
+
+
+
+PRINT 'CREATE TABLE APP_SMS'
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[APP_SMS]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop table [dbo].[APP_SMS]
+GO
+
+CREATE TABLE APP_SMS
+(
+	SMS_ID	Decimal(9)	IDENTITY (1,1)	NOT NULL,
+	SMS_NO	Nvarchar (20)		NOT NULL,
+	SMS_TYPE	Nvarchar (10)		NOT NULL,
+	USER_ID	Decimal(9)		NULL,
+	MOBILE	Nvarchar (20)		NOT NULL,
+	NUMBER	Nvarchar (6)		NULL,
+	MESSAGE	Nvarchar(200)		NULL,
+	IS_READ	Int	Default(0)	NOT NULL,
+	REMARK	Nvarchar(200)		NULL,
+	CREATE_TIME	Datetime		NOT NULL,
+	UPDATE_TIME	DateTime		NOT NULL,
+
+
+	constraint APP_SMS_PK PRIMARY KEY CLUSTERED (SMS_ID)
+)
+GO
+CREATE UNIQUE INDEX APP_SMS_IDX01 ON APP_SMS (SMS_NO)
+GO
